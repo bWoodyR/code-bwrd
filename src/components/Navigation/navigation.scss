@@ -1,0 +1,67 @@
+@use "../../scss/index" as *;
+
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include flex-center(row);
+  justify-content: flex-end;
+  height: $navigationHeight;
+  background-color: #181818;
+
+  &__bars {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem;
+    margin-right: 5rem;
+
+    &__item {
+      font-size: 18px;
+      list-style-type: none;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s ease;
+      cursor: pointer;
+
+      &:hover {
+        color: orange;
+        border-bottom: 2px solid orange;
+      }
+    }
+  }
+  @media (max-width: 700px) {
+    .navigation {
+      position: relative;
+      background-color: aqua;
+      
+      &__list {
+        min-height: 100svh;
+        position: fixed;
+        top: $navigationHeight;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        background-color: #181818;
+
+        &__item {
+          @include flex-center();
+          width: 100%;
+        }
+       }
+
+      &__bars {
+        display: block;
+        font-size: 25px;
+        margin-right: 1rem;
+      }
+    }
+  }
+}

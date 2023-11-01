@@ -1,0 +1,13 @@
+$navigationHeight: 50px;
+
+@mixin flex-center($direction: column) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin sectionTitle {
+  font-size: 35px;
+  border-bottom: 3px solid orange;
+}

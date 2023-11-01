@@ -1,0 +1,12 @@
+@use "../../scss/index" as *;
+
+.subheaderTitle {
+  @include flex-center();
+  font-size: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  width: 100%;
+  padding: 0.5rem 0;
+  background-color: #181818;
+  letter-spacing: 0.25rem;
+}

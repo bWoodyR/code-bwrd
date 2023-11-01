@@ -1,0 +1,25 @@
+@use "../../scss/index" as *;
+
+.technologyCard {
+  @include flex-center(column);
+  gap: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 150px;
+  height: 150px;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: scale 0.2s ease;
+
+  &__img {
+    width: 64px;
+    height: 64px;
+  }
+
+  &__title {
+    letter-spacing: 0.08rem;
+  }
+
+  &:hover {
+    scale: 1.1;
+  }
+}

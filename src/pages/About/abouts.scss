@@ -1,0 +1,15 @@
+@use "../../scss/index" as *;
+
+.about {
+  @include flex-center(column);
+  min-height: 100svh;
+
+  &__header {
+    @include sectionTitle();
+  }
+
+  &__info {
+    @include flex-center(row);
+    gap: 2rem;
+  }
+}

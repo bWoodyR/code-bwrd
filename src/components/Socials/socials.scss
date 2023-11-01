@@ -1,0 +1,26 @@
+@use "../../scss/index" as *;
+
+.socials {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+
+  &__item {
+    @include flex-center(row);
+    width: 48px;
+    height: 48px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &__icon {
+      font-size: 30px;
+    }
+
+    &__selected {
+      width: 120px;
+      justify-content: space-around;
+    }
+  }
+}

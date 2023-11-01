@@ -1,0 +1,39 @@
+@use "../../scss/index" as *;
+
+.intro {
+  @include flex-center(column);
+  min-height: calc(100svh - $navigationHeight);
+  text-align: left;
+
+  &__info {
+    width: 60%;
+
+    & p:nth-child(1) {
+      color: orange;
+    }
+
+    &__name {
+      font-size: 70px;
+    }
+
+    &__job {
+      font-size: 70px;
+      color: gray;
+    }
+
+    &__description {
+      font-size: 20px;
+      color: gray;
+    }
+
+    &__projects-btn {
+      margin-top: 2rem;
+      background: none;
+      border: none;
+      outline: 2px solid white;
+      padding: 0.5rem 2rem;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+  }
+}
