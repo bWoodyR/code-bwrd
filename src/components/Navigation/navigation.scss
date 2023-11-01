@@ -10,7 +10,7 @@
   height: $navigationHeight;
   background-color: #181818;
 
-  &__bars {
+  &__mobile-btn {
     display: none;
   }
 
@@ -34,34 +34,6 @@
       }
     }
   }
-  @media (max-width: 700px) {
-    .navigation {
-      position: relative;
-      background-color: aqua;
-      
-      &__list {
-        min-height: 100svh;
-        position: fixed;
-        top: $navigationHeight;
-        left: 0;
-        width: 100%;
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        flex-direction: column;
-        background-color: #181818;
 
-        &__item {
-          @include flex-center();
-          width: 100%;
-        }
-       }
 
-      &__bars {
-        display: block;
-        font-size: 25px;
-        margin-right: 1rem;
-      }
-    }
-  }
 }

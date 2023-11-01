@@ -1,10 +1,11 @@
 import "./navigation.scss";
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 type Props = {
   setSelectedSection: React.Dispatch<React.SetStateAction<string>>;
 };
+
 
 const Navigation = ({ setSelectedSection }: Props) => {
   const [showNavigation, setShowNavigation] = useState(false);
@@ -16,19 +17,9 @@ const Navigation = ({ setSelectedSection }: Props) => {
     setShowNavigation(false);
   };
 
-  useEffect(() => {
-    if (navigationListRef.current) {
-      if (!showNavigation) {
-        navigationListRef.current.style.display = "none";
-      } else {
-        navigationListRef.current.style.display = "flex";
-      }
-    }
-  }, [showNavigation]);
-
   return (
     <nav className="navigation" ref={navigationRef}>
-      <ul className="navigation__list" ref={navigationListRef}>
+      <ul className={`navigation__list ${showNavigation ? "" : "navigation__hide"}`} ref={navigationListRef}>
         <li className="navigation__list__item" onClick={() => handleNavigationClick("intro")}>
           Home
         </li>
@@ -45,7 +36,7 @@ const Navigation = ({ setSelectedSection }: Props) => {
           Contact me
         </li>
       </ul>
-      {showNavigation ? <FaTimes className="navigation__bars" onClick={() => setShowNavigation(false)} /> : <FaBars className="navigation__bars" onClick={() => setShowNavigation(true)} />}
+      <FaBars className="navigation__mobile-btn" onClick={() => setShowNavigation(!showNavigation)} />
     </nav>
   );
 };
