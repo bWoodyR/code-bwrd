@@ -15,8 +15,13 @@
     margin-top: 2rem;
     width: 80%;
 
-    @media (max-width: 900px) {
-      @include flex-center(column);
+    @media (max-width: $mmq) {
+      @include flex-center(column);      
+    }
+
+    @media (max-width: $smq) {
+        width: 90%;
+ 
     }
 
     &__left {
@@ -27,7 +32,7 @@
       border-radius: 10px;
       font-family: "Fira Code", monospace;
 
-      @media (max-width: 900px) {
+      @media (max-width: $mmq) {
         width: 100%;
       }
     }

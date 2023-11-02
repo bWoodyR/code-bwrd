@@ -2,8 +2,10 @@ import "./contact.scss";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useSendEmail } from "../../hooks/useSendEmail";
 
 const Contact = () => {
+  const {mutate} = useSendEmail()
   const [messageData, setMessageData] = useState({
     name: "",
     email: "",
@@ -20,8 +22,9 @@ const Contact = () => {
       setShowError(true);
       messageSendError();
     } else {
-      messageSendSuccess();
       setMessageData({ name: "", email: "", titleOfMessage: "", textOfMessage: "" });
+      mutate(messageData)
+      messageSendSuccess();
     }
   };
 
@@ -46,7 +49,7 @@ const Contact = () => {
           SEND MESSAGE
         </button>
       </form>
-      <ToastContainer theme="dark" pauseOnHover={false} draggable={false} hideProgressBar={true} autoClose={2500} position="bottom-left" />
+      <ToastContainer theme="dark" pauseOnHover={false} draggable={false} hideProgressBar={true} autoClose={3500} position="bottom-left" />
     </div>
   );
 };
