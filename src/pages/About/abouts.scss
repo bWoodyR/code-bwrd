@@ -5,6 +5,10 @@
   min-height: 100svh;
   background-color: #2f2f2f;
 
+  @media (max-width: $mmq) {
+     padding: 0 0 2rem 0;   
+    }
+
   &__header {
     @include sectionTitle();
   }
@@ -26,7 +30,7 @@
 
     &__left {
       font-size: 25px;
-      width: 40%;
+      width: 50%;
       background-color: #181818;
       padding: 1rem;
       border-radius: 10px;

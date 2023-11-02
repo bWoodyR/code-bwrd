@@ -2,6 +2,8 @@ import { useEffect, useState, useRef } from "react";
 import { Intro, About, Experience, Projects, Contact, Socials } from "../../components";
 import "./home.scss";
 import Navigation from "../../components/Navigation/Navigation";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Home = () => {
   const introRef = useRef<HTMLElement>(null);
@@ -57,6 +59,7 @@ const Home = () => {
         <Contact />
       </section>
       <Socials />
+      <ToastContainer theme="dark" pauseOnHover={false} draggable={false} hideProgressBar={true} autoClose={3500} position="bottom-left" />
     </>
   );
 };

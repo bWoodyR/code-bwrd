@@ -11,7 +11,7 @@ const About = () => {
         <h2 className="about__info__left">
           {"<"}
           <span className="component">Hi</span>
-          <br /> <span className="prop">name</span>=<span className="value">{'"I\'m Roman"'}</span>
+          <br /> <span className="prop">introduction</span>=<span className="value">{'"I\'m Roman"'}</span>
           <br /> <span className="prop">greeting</span>=<span className="value">{'"Nice to meet you."'}</span>
           <br />
           <span className="prop">action</span>=<span className="value">{'"Please take a look around!"'}</span>

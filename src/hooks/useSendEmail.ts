@@ -1,5 +1,6 @@
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 type MessageDataType = {
   name: string;
@@ -8,15 +9,20 @@ type MessageDataType = {
   textOfMessage: string;
 };
 
+const server = import.meta.env.VITE_BWRD_SERVER_ADDRESS;
+
+
 export const useSendEmail = () => {
   const { mutate, isPending } = useMutation({
     mutationFn: async (data: MessageDataType) => {
-      const response = await axios.post("http://localhost:4000/api/v1/contact_me", data);
+      const response = await axios.post(`${server}/contact_me`, data);
       return response.data;
     },
-    onSuccess: () => {},
-    onError: (error) => {
-      console.log(error);
+    onSuccess: () => {
+      toast.success("Message successfully send!");
+    },
+    onError: () => {
+      toast.error("Unable to send message!");
     },
   });
   return { mutate, isPending };
