@@ -6,6 +6,22 @@
   left: 0;
   transform: translate(0, -50%);
 
+  @media (max-width: 700px) {
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    position: relative;
+    background-color: #181818;
+    padding: 1rem;
+  }
+
+  &__items {
+    @media (max-width: 700px) {
+      @include flex-center(row);
+      gap: 1rem;
+    }
+  }
+
   &__item {
     @include flex-center(row);
     width: 48px;
@@ -14,6 +30,11 @@
     cursor: pointer;
     transition: all 0.2s ease;
 
+    @media (max-width: 700px) {
+      border-radius: 10px;
+        
+    }
+
     &__icon {
       font-size: 30px;
     }
@@ -21,6 +42,8 @@
     &__selected {
       width: 120px;
       justify-content: space-around;
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
   }
 }

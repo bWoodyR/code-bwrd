@@ -5,7 +5,7 @@ $bg-clr-navigation: #181818;
 .navigation {
   position: fixed;
   width: 100%;
-  min-height: 70px;
+  min-height: $navigationHeight;
   background-color: $bg-clr-navigation;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@ $bg-clr-navigation: #181818;
 
   @media (min-width: $smq) {
     width: 100%;
-    min-height: 70px;
+    min-height: $navigationHeight;
     background-color: $bg-clr-navigation;
     display: flex;
     justify-content: center;

@@ -11,7 +11,7 @@ const Navigation = ({ setSelectedSection }: Props) => {
   const navigationListRef = useRef<HTMLUListElement>(null);
   const navigationContainerListRef = useRef<HTMLDivElement>(null);
 
-  const handleNavigationClick = (section: string) => {
+  const handleNavigationLiClick = (section: string) => {
     setSelectedSection(section);
     setShowNavigation(false);
   };
@@ -34,19 +34,19 @@ const Navigation = ({ setSelectedSection }: Props) => {
       </div>
       <div className="navigation__container" ref={navigationContainerListRef}>
         <ul className={`navigation__list `} ref={navigationListRef}>
-          <li className="navigation__list__item" onClick={() => handleNavigationClick("intro")}>
+          <li className="navigation__list__item" onClick={() => handleNavigationLiClick("intro")}>
             Home
           </li>
-          <li className="navigation__list__item" onClick={() => handleNavigationClick("about")}>
+          <li className="navigation__list__item" onClick={() => handleNavigationLiClick("about")}>
             About
           </li>
-          <li className="navigation__list__item" onClick={() => handleNavigationClick("experience")}>
+          <li className="navigation__list__item" onClick={() => handleNavigationLiClick("experience")}>
             Experience
           </li>
-          <li className="navigation__list__item" onClick={() => handleNavigationClick("projects")}>
+          <li className="navigation__list__item" onClick={() => handleNavigationLiClick("projects")}>
             Projects
           </li>
-          <li className="navigation__list__item" onClick={() => handleNavigationClick("contact")}>
+          <li className="navigation__list__item" onClick={() => handleNavigationLiClick("contact")}>
             Contact me
           </li>
         </ul>
