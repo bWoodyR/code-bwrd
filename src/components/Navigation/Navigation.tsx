@@ -1,42 +1,56 @@
 import "./navigation.scss";
-import { useState, useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { useState, useRef, useEffect } from "react";
+import { FaBars } from "react-icons/fa";
 
 type Props = {
   setSelectedSection: React.Dispatch<React.SetStateAction<string>>;
 };
 
-
 const Navigation = ({ setSelectedSection }: Props) => {
   const [showNavigation, setShowNavigation] = useState(false);
   const navigationListRef = useRef<HTMLUListElement>(null);
-  const navigationRef = useRef<HTMLElement>(null);
+  const navigationContainerListRef = useRef<HTMLDivElement>(null);
 
   const handleNavigationClick = (section: string) => {
     setSelectedSection(section);
     setShowNavigation(false);
   };
 
+  useEffect(() => {
+    if (navigationListRef.current) {
+      const navigationListHeight = navigationListRef.current.getBoundingClientRect().height;
+      if (showNavigation) {
+        navigationContainerListRef.current!.style.height = `${navigationListHeight}px`;
+      } else {
+        navigationContainerListRef.current!.style.height = "0px";
+      }
+    }
+  }, [showNavigation]);
+
   return (
-    <nav className="navigation" ref={navigationRef}>
-      <ul className={`navigation__list ${showNavigation ? "" : "navigation__hide"}`} ref={navigationListRef}>
-        <li className="navigation__list__item" onClick={() => handleNavigationClick("intro")}>
-          Home
-        </li>
-        <li className="navigation__list__item" onClick={() => handleNavigationClick("about")}>
-          About
-        </li>
-        <li className="navigation__list__item" onClick={() => handleNavigationClick("experience")}>
-          Experience
-        </li>
-        <li className="navigation__list__item" onClick={() => handleNavigationClick("projects")}>
-          Projects
-        </li>
-        <li className="navigation__list__item" onClick={() => handleNavigationClick("contact")}>
-          Contact me
-        </li>
-      </ul>
-      <FaBars className="navigation__mobile-btn" onClick={() => setShowNavigation(!showNavigation)} />
+    <nav className="navigation" >
+      <div>
+        <FaBars className="navigation__mobile-btn" onClick={() => setShowNavigation(!showNavigation)} />
+      </div>
+      <div className="navigation__container" ref={navigationContainerListRef}>
+        <ul className={`navigation__list `} ref={navigationListRef}>
+          <li className="navigation__list__item" onClick={() => handleNavigationClick("intro")}>
+            Home
+          </li>
+          <li className="navigation__list__item" onClick={() => handleNavigationClick("about")}>
+            About
+          </li>
+          <li className="navigation__list__item" onClick={() => handleNavigationClick("experience")}>
+            Experience
+          </li>
+          <li className="navigation__list__item" onClick={() => handleNavigationClick("projects")}>
+            Projects
+          </li>
+          <li className="navigation__list__item" onClick={() => handleNavigationClick("contact")}>
+            Contact me
+          </li>
+        </ul>
+      </div>
     </nav>
   );
 };

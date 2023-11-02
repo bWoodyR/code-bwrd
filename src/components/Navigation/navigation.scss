@@ -1,25 +1,62 @@
 @use "../../scss/index" as *;
 
+$bg-clr-navigation: #181818;
+
 .navigation {
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  @include flex-center(row);
-  justify-content: flex-end;
-  height: $navigationHeight;
-  background-color: #181818;
+  min-height: 70px;
+  background-color: $bg-clr-navigation;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+
+  @media (min-width: $smq) {
+    width: 100%;
+    min-height: 70px;
+    background-color: $bg-clr-navigation;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 15px;
+  }
 
   &__mobile-btn {
-    display: none;
+    display: block;
+    font-size: 30px;
+    color: white;
+
+    @media (min-width: $smq) {
+      display: none;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: all 0.3s linear;
+
+    @media (min-width: $smq) {
+      height: auto !important;
+    }
   }
 
   &__list {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 2rem;
-    margin-right: 5rem;
+    flex-direction: column;
+    background-color: $bg-clr-navigation;
+    min-width: 100%;
+    text-align: center;
+
+    @media (min-width: $smq) {
+      display: flex;
+      flex-direction: row;
+      list-style-type: none;
+      justify-content: flex-end;
+      gap: 1rem;
+    }
 
     &__item {
       font-size: 18px;
@@ -27,13 +64,14 @@
       border-bottom: 2px solid transparent;
       transition: all 0.2s ease;
       cursor: pointer;
+      padding: 0.5rem;
 
-      &:hover {
-        color: orange;
-        border-bottom: 2px solid orange;
+      @media (min-width: $smq) {
+        &:hover {
+          color: orange;
+          border-bottom: 2px solid orange;
+        }
       }
     }
   }
-
-
 }

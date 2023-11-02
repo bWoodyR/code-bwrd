@@ -5,7 +5,7 @@ type Props = {
   description?: string;
   img?: string;
   video?: string;
-  liveSiteURL?: string;
+  liveSiteURL: string;
   type: string;
 };
 
@@ -18,7 +18,7 @@ const ProjectCard = ({ title, description, img, video, liveSiteURL, type }: Prop
       {img && <img src={img}></img>}
       {video && <iframe width={350} height={200} src={video} title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>}
       <div className="projectCard__btn-container">
-        <a href={liveSiteURL} target="_blank">
+        <a href={liveSiteURL} target="_blank" className={`projectCard__btn ${liveSiteURL ? "" : "projectCard__btn-disabled"}`}>
           {type === "web" ? "Live site" : "Download"}
         </a>
       </div>

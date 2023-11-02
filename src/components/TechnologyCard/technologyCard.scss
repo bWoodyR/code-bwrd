@@ -22,4 +22,8 @@
   &:hover {
     scale: 1.1;
   }
+
+  @media (max-width: $smq) {
+    z-index: -1;
+  }
 }
