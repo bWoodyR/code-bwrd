@@ -38,7 +38,7 @@ export const projects = [
     type: "game dev",
     projects: [
       {
-        title: "5 Days To Survive",
+        title: "5 Nights To Live",
         description: "Game powered by Unreal Engine 5. First person shooter game, where player have to survive for 5 days in a dark forest. Every night waves of zombies are trying to kill player.",
         img: "",
         video: "",

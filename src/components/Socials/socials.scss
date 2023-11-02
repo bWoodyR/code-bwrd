@@ -18,6 +18,7 @@
   &__items {
     @media (max-width: 700px) {
       @include flex-center(row);
+      flex-wrap: wrap;
       gap: 1rem;
     }
   }

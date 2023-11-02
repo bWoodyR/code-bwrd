@@ -1,4 +1,5 @@
 import "./abouts.scss";
+import { FaChevronRight } from "react-icons/fa6";
 
 const About = () => {
   return (
@@ -7,11 +8,27 @@ const About = () => {
         <h1>About me</h1>
       </div>
       <div className="about__info">
-        <h2>Hi, I'm Roman, nice to meet you. Please take a look around!</h2>
-        <p>
-          I am passionate about building excellent software that improves the lives of those around me. I specialize in creating software for client ranging from individuals and small-businesses all the way to large enterprise corporations. What would you do if you had a software expret available at
-          your fingerprints?
-        </p>
+        <h2 className="about__info__left">
+          {"<"}
+          <span className="component">Hi</span>
+          <br /> <span className="prop">name</span>=<span className="value">{'"I\'m Roman"'}</span>
+          <br /> <span className="prop">greeting</span>=<span className="value">{'"Nice to meet you."'}</span>
+          <br />
+          <span className="prop">action</span>=<span className="value">{'"Please take a look around!"'}</span>
+          {" />"}
+        </h2>
+        <ul className="about__info__list">
+          <li className="about__info__list__item">
+            <FaChevronRight className="about__info__list__item__icon" />I am currently based in Slovakia {"(TN)"}.
+          </li>
+          <li className="about__info__list__item">
+            <FaChevronRight className="about__info__list__item__icon" />I am passionate about building software that improves the lives of those around me.
+          </li>
+          <li className="about__info__list__item">
+            <FaChevronRight className="about__info__list__item__icon" />
+            In my spare time, I delve into the realm of game development, exploring the exciting possibilities offered by the Unreal Engine.
+          </li>
+        </ul>
       </div>
     </div>
   );

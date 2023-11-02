@@ -2,11 +2,12 @@
 
 .intro {
   @include flex-center(column);
-  min-height: calc(100svh - $navigationHeight);
+  // min-height: calc(100svh + $navigationHeight);
+  min-height: 100svh;
   text-align: left;
 
   &__info {
-    width: 60%;
+    width: 70%;
 
     & p:nth-child(1) {
       color: orange;
@@ -22,7 +23,7 @@
     }
 
     &__description {
-      font-size: 20px;
+      font-size: 18px;
       color: gray;
     }
 
@@ -34,6 +35,12 @@
       padding: 0.5rem 2rem;
       border-radius: 20px;
       cursor: pointer;
+      transition: all 0.2s ease;
+
+      &:hover {
+        color: orange;
+        outline: 2px solid orange;
+      }
     }
   }
 }

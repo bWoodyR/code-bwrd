@@ -28,26 +28,26 @@ const Navigation = ({ setSelectedSection }: Props) => {
   }, [showNavigation]);
 
   return (
-    <nav className="navigation" >
+    <nav className="navigation">
       <div>
         <FaBars className="navigation__mobile-btn" onClick={() => setShowNavigation(!showNavigation)} />
       </div>
       <div className="navigation__container" ref={navigationContainerListRef}>
         <ul className={`navigation__list `} ref={navigationListRef}>
           <li className="navigation__list__item" onClick={() => handleNavigationLiClick("intro")}>
-            Home
+            {"<Home />"}
           </li>
           <li className="navigation__list__item" onClick={() => handleNavigationLiClick("about")}>
-            About
+            {"<About />"}
           </li>
           <li className="navigation__list__item" onClick={() => handleNavigationLiClick("experience")}>
-            Experience
+            {"<Experience />"}
           </li>
           <li className="navigation__list__item" onClick={() => handleNavigationLiClick("projects")}>
-            Projects
+            {"<Projects />"}
           </li>
           <li className="navigation__list__item" onClick={() => handleNavigationLiClick("contact")}>
-            Contact me
+            {"<ContactMe />"}
           </li>
         </ul>
       </div>

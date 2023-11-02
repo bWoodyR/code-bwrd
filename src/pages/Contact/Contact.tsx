@@ -34,6 +34,7 @@ const Contact = () => {
     <div className="contact">
       <div className="contact__header">
         <h1 className="contact__header__title">Contact Me</h1>
+        <p className="contact__header__infoText">// Got a question or problem to solve? Hit me up.</p>
       </div>
       {showError && <p className="contact__error">Error! Message was not send. Check if you fill all the fields.</p>}
       <form onSubmit={(e) => handleSubmit(e)} className="contact__form">
