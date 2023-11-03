@@ -1,6 +1,7 @@
 import "./navigation.scss";
 import { useState, useRef, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
+import Sticker from "../Sticker/Sticker";
 
 type Props = {
   setSelectedSection: React.Dispatch<React.SetStateAction<string>>;
@@ -29,6 +30,7 @@ const Navigation = ({ setSelectedSection }: Props) => {
 
   return (
     <nav className="navigation">
+      <Sticker text="Open to work" callback={() => handleNavigationLiClick("contact")} />
       <div>
         <FaBars className="navigation__mobile-btn" onClick={() => setShowNavigation(!showNavigation)} />
       </div>

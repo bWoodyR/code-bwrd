@@ -2,10 +2,33 @@ import "./abouts.scss";
 import { FaChevronRight } from "react-icons/fa6";
 
 const About = () => {
+  const aboutMeList = [
+    {
+      title: "Location",
+      text: "Currently based in Slovakia (TN)",
+    },
+    {
+      title: "Passion for Software Development",
+      text: "I'm passionate about building software that improves the lives of those around me as well as others.",
+    },
+    {
+      title: "React Development",
+      text: "I'm delving deeper into React development.",
+    },
+    {
+      title: "Tech Enthusiast",
+      text: "An avid PC gamer and enthusiast of the latest tech trends, I am always exploring new software and hardware innovations.",
+    },
+    {
+      title: "Game Development",
+      text: "In my spare time, I delve into the realm of game development, exploring the exciting possibilities offered by the Unreal Engine 5.",
+    },
+  ];
+
   return (
     <div className="about">
       <div className="about__header">
-        <h1>About me</h1>
+        <h1 className="about__header__title">About me</h1>
       </div>
       <div className="about__info">
         <h2 className="about__info__left">
@@ -18,16 +41,14 @@ const About = () => {
           {" />"}
         </h2>
         <ul className="about__info__list">
-          <li className="about__info__list__item">
-            <FaChevronRight className="about__info__list__item__icon" />I am currently based in Slovakia {"(TN)"}.
-          </li>
-          <li className="about__info__list__item">
-            <FaChevronRight className="about__info__list__item__icon" />I am passionate about building software that improves the lives of those around me.
-          </li>
-          <li className="about__info__list__item">
-            <FaChevronRight className="about__info__list__item__icon" />
-            In my spare time, I delve into the realm of game development, exploring the exciting possibilities offered by the Unreal Engine.
-          </li>
+          {aboutMeList.map((item, index) => {
+            return (
+              <li key={index} className="about__info__list__item">
+                <FaChevronRight className="about__info__list__item__icon" />
+                {item.text}
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>

@@ -9,6 +9,7 @@ $bg-clr-navigation: #181818;
   background-color: $bg-clr-navigation;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   padding: 15px;
 
   @media (min-width: $smq) {
@@ -23,10 +24,11 @@ $bg-clr-navigation: #181818;
     padding: 15px;
   }
 
-  &__mobile-btn {
+    &__mobile-btn {
     display: block;
     font-size: 30px;
     color: white;
+    margin-right: 1rem;
 
     @media (min-width: $smq) {
       display: none;
@@ -65,9 +67,9 @@ $bg-clr-navigation: #181818;
       transition: all 0.2s ease;
       cursor: pointer;
       padding: 0.5rem;
-      font-family: 'Fira Code', monospace;
+      font-family: "Fira Code", monospace;
 
-      color:goldenrod;
+      color: goldenrod;
       @media (min-width: $smq) {
         &:hover {
           color: orange;

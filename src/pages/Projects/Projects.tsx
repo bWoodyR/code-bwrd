@@ -16,7 +16,7 @@ const Projects = () => {
               <SubheaderTitle title={project.type.toUpperCase()} />
               <div className="projects__items__cards">
                 {project.projects.map((item) => {
-                  return <ProjectCard key={item.title} title={item.title} description={item.description} img={item.img} video={item.video} liveSiteURL={item.liveSiteURL} type={project.type} />;
+                  return <ProjectCard key={item.title} title={item.title} description={item.description} img={item.img} video={item.video} liveSiteURL={item.liveSiteURL} type={project.type} availableForPublic={item.availableForPublic}/>;
                 })}
               </div>
             </div>

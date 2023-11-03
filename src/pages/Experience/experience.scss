@@ -4,14 +4,10 @@
   @include flex-center(column);
   min-height: 100svh;
   padding: 2rem;
-  &__header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 2rem 0;
 
+  &__header {
+    @include sectionHeader();
+    
     &__title {
       @include sectionTitle();
     }

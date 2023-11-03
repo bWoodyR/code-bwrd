@@ -9,7 +9,7 @@
 
 
   &__header {
-    padding: 2rem 0;
+    @include sectionHeader();
 
     &__title {
       @include sectionTitle();
@@ -28,8 +28,8 @@
 
     &__cards {
       @include flex-center(row);
-      flex-wrap: wrap;
-      align-items: stretch;
+      flex-wrap: wrap;  
+      align-items: flex-start;
       padding: 1rem;
       gap: 1.5rem;
     }

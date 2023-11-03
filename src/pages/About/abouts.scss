@@ -5,12 +5,16 @@
   min-height: 100svh;
   background-color: #2f2f2f;
 
-  @media (max-width: $mmq) {
-     padding: 0 0 2rem 0;   
-    }
+  @media (max-width: $smq) {
+    padding: 2rem 0;
+  }
 
   &__header {
-    @include sectionTitle();
+    @include sectionHeader();
+
+    &__title {
+      @include sectionTitle();
+    }
   }
 
   &__info {
@@ -20,12 +24,11 @@
     width: 80%;
 
     @media (max-width: $mmq) {
-      @include flex-center(column);      
+      @include flex-center(column);
     }
 
     @media (max-width: $smq) {
-        width: 90%;
- 
+      width: 90%;
     }
 
     &__left {
@@ -46,7 +49,7 @@
       list-style-type: none;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.5rem;
 
       &__item {
         display: flex;
@@ -61,7 +64,6 @@
     }
   }
 }
-
 /*
 *   CODE STYLES    
 */

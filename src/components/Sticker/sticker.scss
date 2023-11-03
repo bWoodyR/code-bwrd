@@ -1,0 +1,31 @@
+@use "../../scss//index" as *;
+
+.sticker {
+  position: absolute;
+  top: 2rem;
+  left: -3rem;
+  transform: rotate(-45deg);
+  width: 200px;
+  height: 35px;
+  background-color: goldenrod;
+  color: black;
+  @include flex-center();
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s linear;
+
+  @media (max-width: $mmq) {
+    transform: rotate(0);
+    top: calc($navigationHeight);
+    left: 0;
+    border-radius: 0px 0 20px 0;
+  }
+
+  @media (max-width: $smq) {
+    transform: rotate(0);
+    top: 0;
+    left: 0;
+  }
+}

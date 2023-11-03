@@ -1,34 +1,65 @@
 @use "../../scss/index" as *;
 
 .intro {
-  @include flex-center(column);
+  @include flex-center(row);
   // min-height: calc(100svh + $navigationHeight);
   min-height: 100svh;
   text-align: left;
 
-  &__info {
-    width: 70%;
+  &__image {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-color: goldenrod;
+  }
 
-    @media (max-width: $mmq) {
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 60%;
+
+    @media (max-width: $smq) {
+      width: 100%;
+      padding: 0 2rem;
     }
 
     & p:nth-child(1) {
-      color: orange;
+      color: goldenrod;
+      font-size: 16px;
+      font-weight: 600;
+      font-style: italic;
+      line-height: 1;
+
+      @media (max-width: $smq) {
+        font-size: 14px;
+      }
     }
 
     &__name {
       font-size: 70px;
+      line-height: 1;
 
       @media (max-width: $mmq) {
         font-size: 50px;
+      }
+
+      @media (max-width: $smq) {
+        font-size: 40px;
       }
     }
 
     &__job {
       font-size: 70px;
       color: gray;
+
       @media (max-width: $mmq) {
         font-size: 50px;
+      }
+
+      @media (max-width: $smq) {
+        font-size: 30px;
       }
     }
 
@@ -38,6 +69,10 @@
       @media (max-width: $mmq) {
         font-size: 16px;
       }
+
+      @media (max-width: $smq) {
+        font-size: 14px;
+      }
     }
 
     &__projects-btn {
@@ -45,7 +80,7 @@
       background: none;
       border: none;
       outline: 2px solid white;
-      padding: 0.5rem 2rem;
+      padding: 0.5rem 3rem;
       border-radius: 20px;
       cursor: pointer;
       transition: all 0.2s ease;
