@@ -21,7 +21,7 @@ const Intro = ({ setSelectedSection }: Props) => {
           Check my work
         </button>
       </div>
-      <div className="intro__image"></div>
+      {/* <div className="intro__image"></div> */}
     </div>
   );
 };
