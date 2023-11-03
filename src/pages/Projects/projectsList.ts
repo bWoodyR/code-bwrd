@@ -29,7 +29,7 @@ export const projects = [
         availableForPublic: true,
       },
       {
-        title: "Slovanet internal system",
+        title: "Internal Linker System",
         description: "Some random text will be here about app",
         img: "",
         video: "",
