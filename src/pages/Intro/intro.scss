@@ -47,6 +47,10 @@ $extraSmallResolution: 385px;
     padding: 2rem 0;
   }
 
+  @media (max-height: 500px) and (max-width: $smq) {
+    padding: 2rem 0;
+  }
+
   &__info {
     margin-top: $navigationHeight;
     display: flex;

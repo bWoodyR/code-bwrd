@@ -29,11 +29,18 @@
     left: 0;
   }
 
-  @media (max-height: 420px) {
+  @media (max-height: 500px) {
     transform: rotate(0);
     left: unset;
     top: $navigationHeight;
     right: 0;
     border-radius: 0px 0 0 20px;
+  }
+
+  @media (max-height: 500px) and (max-width: $smq) {
+    right: unset;
+    top: 0;
+    left: 0;
+    border-radius: 0px 0 20px 0;
   }
 }
