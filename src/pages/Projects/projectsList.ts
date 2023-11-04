@@ -1,4 +1,6 @@
 import financeLiteracyImage from "../../assets/thumbnails/finance_literacy_img.png";
+import linkerImage from "../../assets/thumbnails/linker_img.png"
+import generatorsImage from "../../assets/thumbnails/generators_img.png"
 import placeholderImage from "../../assets/thumbnails/placeholderImage.png";
 import unreaclEnginIcon from "../../assets/techIcons/unrealengineIcon.svg";
 import godotIcon from "../../assets/techIcons/godotIcon.svg";
@@ -23,7 +25,8 @@ export const projects = [
       {
         title: "Finance Literacy Game",
         usedTechImgs: [reactIcon, typescriptIcon, reactQueryIcon, sassIcon, mongoIcon, dockerIcon, googleCloud],
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim aut repellat nostrum quas laboriosam sed provident blanditiis quo nemo omnis, quaerat exercitationem fugiat placeat eum obcaecati numquam. Perferendis praesentium cupiditate maxime, illo repudiandae quis. Officiis excepturi, suscipit, corporis sint minima necessitatibus eum amet obcaecati velit voluptates odio error. Soluta, consequuntur.",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim aut repellat nostrum quas laboriosam sed provident blanditiis quo nemo omnis, quaerat exercitationem fugiat placeat eum obcaecati numquam. Perferendis praesentium cupiditate maxime, illo repudiandae quis. Officiis excepturi, suscipit, corporis sint minima necessitatibus eum amet obcaecati velit voluptates odio error. Soluta, consequuntur.",
         img: financeLiteracyImage,
         video: "",
         liveSiteURL: "https://fmk.bwrd.eu",
@@ -32,7 +35,8 @@ export const projects = [
       {
         title: "QR & Quiz App",
         usedTechImgs: [reactIcon, typescriptIcon, sassIcon],
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim aut repellat nostrum quas laboriosam sed provident blanditiis quo nemo omnis, quaerat exercitationem fugiat placeat eum obcaecati numquam. Perferendis praesentium cupiditate maxime, illo repudiandae quis. Officiis excepturi, suscipit, corporis sint minima necessitatibus eum amet obcaecati velit voluptates odio error. Soluta, consequuntur.",
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim aut repellat nostrum quas laboriosam sed provident blanditiis quo nemo omnis, quaerat exercitationem fugiat placeat eum obcaecati numquam. Perferendis praesentium cupiditate maxime, illo repudiandae quis. Officiis excepturi, suscipit, corporis sint minima necessitatibus eum amet obcaecati velit voluptates odio error. Soluta, consequuntur.",
         img: placeholderImage,
         video: "",
         liveSiteURL: "https://quiz-bwrd.netlify.app/",
@@ -41,17 +45,19 @@ export const projects = [
       {
         title: "Generators",
         usedTechImgs: [reactIcon, typescriptIcon, cssIcon],
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim aut repellat nostrum quas laboriosam sed provident blanditiis quo nemo omnis, quaerat exercitationem fugiat placeat eum obcaecati numquam. Perferendis praesentium cupiditate maxime, illo repudiandae quis. Officiis excepturi, suscipit, corporis sint minima necessitatibus eum amet obcaecati velit voluptates odio error. Soluta, consequuntur.",
-        img: placeholderImage,
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim aut repellat nostrum quas laboriosam sed provident blanditiis quo nemo omnis, quaerat exercitationem fugiat placeat eum obcaecati numquam. Perferendis praesentium cupiditate maxime, illo repudiandae quis. Officiis excepturi, suscipit, corporis sint minima necessitatibus eum amet obcaecati velit voluptates odio error. Soluta, consequuntur.",
+        img: generatorsImage,
         video: "",
-        liveSiteURL: "",
+        liveSiteURL: "https://bwrd.eu/#/tipsport",
         availableForPublic: true,
       },
       {
         title: "Internal Linker System",
         usedTechImgs: [jsIcon, htmlIcon, cssIcon],
-        description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim aut repellat nostrum quas laboriosam sed provident blanditiis quo nemo omnis, quaerat exercitationem fugiat placeat eum obcaecati numquam. Perferendis praesentium cupiditate maxime, illo repudiandae quis. Officiis excepturi, suscipit, corporis sint minima necessitatibus eum amet obcaecati velit voluptates odio error. Soluta, consequuntur.",
-        img: placeholderImage,
+        description:
+          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim aut repellat nostrum quas laboriosam sed provident blanditiis quo nemo omnis, quaerat exercitationem fugiat placeat eum obcaecati numquam. Perferendis praesentium cupiditate maxime, illo repudiandae quis. Officiis excepturi, suscipit, corporis sint minima necessitatibus eum amet obcaecati velit voluptates odio error. Soluta, consequuntur.",
+        img: linkerImage,
         video: "",
         liveSiteURL: "",
         availableForPublic: false,
