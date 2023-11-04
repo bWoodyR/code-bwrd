@@ -1,5 +1,5 @@
 import { FaLinkedin, FaGithub, FaClipboardUser } from "react-icons/fa6";
-import Resume from "../../assets/Resume/Resume.pdf";
+// import Resume from "../../assets/Resume/Resume.pdf";
 
 export const socials = [
   {
@@ -18,6 +18,6 @@ export const socials = [
     title: "Resume",
     icon: <FaClipboardUser />,
     color: "gray",
-    url: Resume,
+    url: "",
   },
 ];

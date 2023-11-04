@@ -29,7 +29,7 @@
       @include flex-center(row);
       flex-wrap: wrap;  
       align-items: flex-start;
-      padding: 1rem;
+      padding: 1rem 0;
       gap: 1.5rem;
     }
   }

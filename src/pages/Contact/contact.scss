@@ -12,9 +12,8 @@
   &__header {
     @include sectionHeader();
 
-
     @media (max-width: $smq) {
-      padding: 0 2rem;
+      padding: 2rem;
     }
 
     &__title {

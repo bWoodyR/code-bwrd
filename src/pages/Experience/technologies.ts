@@ -1,4 +1,4 @@
-import { cssIcon, dockerIcon, fingmaIcon, githubIcon, godotIcon, googlecloudIcon, htmlIcon, jiraIcon, jsIcon, mongoIcon, nodejsIcon, postmanIcon, reactIcon, reactqueryIcon, sassIcon, typescriptIcon, unrealengineIcon } from "../../assets";
+import {photoshopIcon, premiere_proIcon, cssIcon, dockerIcon, figmaIcon, githubIcon, godotIcon, googlecloudIcon, htmlIcon, jiraIcon, jsIcon, mongoIcon, nodejsIcon, postmanIcon, reactIcon, reactqueryIcon, sassIcon, typescriptIcon, unrealengineIcon } from "../../assets";
 
 export const technologies = [
   {
@@ -80,13 +80,21 @@ export const technologies = [
         title: "Github",
       },
       {
-        img: fingmaIcon,
+        img: figmaIcon,
         title: "Figma",
       },
 
       {
         img: jiraIcon,
         title: "Jira",
+      },
+      {
+        img: photoshopIcon,
+        title: "Photoshop",
+      },
+      {
+        img: premiere_proIcon,
+        title: "Premiere Pro",
       },
     ],
   },

@@ -1,20 +1,35 @@
 @use "../../scss/index" as *;
 
+$extraSmallResolution: 385px;
+
 .underline {
   position: relative;
-  outline: 2px solid green;
 }
 
 .underline::after {
   content: "";
   position: absolute;
-  top: 3rem;
+  z-index: -10;
+  top: 4.5rem;
   left: 0;
   background-image: url("../../assets/underline.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  height: 1rem;
-  width: 100%
+  height: 2rem;
+  width: 100%;
+
+  @media (max-width: $mmq) {
+    top: 3.5rem;
+  }
+
+  @media (max-width: $smq) {
+    top: 3rem;
+  }
+
+  @media (max-width: $extraSmallResolution) {
+    left: -2rem;
+    top: 6rem;
+  }
 }
 
 .intro {
@@ -23,10 +38,13 @@
   min-height: 100svh;
   text-align: left;
 
-
   @media (max-width: $mmq) {
     @include flex-center(row);
     gap: 1rem;
+  }
+
+  @media (max-width: $extraSmallResolution) {
+    padding: 2rem 0;
   }
 
   &__info {
@@ -52,7 +70,7 @@
       line-height: 2;
 
       @media (max-width: $smq) {
-        font-size: 14px;
+        font-size: 16px;
       }
     }
 
@@ -65,7 +83,7 @@
       }
 
       @media (max-width: $smq) {
-        font-size: 40px;
+        font-size: 45px;
       }
     }
 
@@ -79,7 +97,7 @@
       }
 
       @media (max-width: $smq) {
-        font-size: 30px;
+        font-size: 35px;
       }
     }
 
@@ -91,7 +109,7 @@
       }
 
       @media (max-width: $smq) {
-        font-size: 14px;
+        font-size: 18px;
       }
     }
 
@@ -99,6 +117,7 @@
       margin-top: 2rem;
       background: none;
       border: none;
+      color: white;
       outline: 2px solid white;
       padding: 0.5rem 3rem;
       border-radius: 20px;
@@ -108,6 +127,10 @@
       &:hover {
         color: orange;
         outline: 2px solid orange;
+      }
+
+      @media (max-width: $extraSmallResolution) {
+        margin-top: 1rem;
       }
     }
   }

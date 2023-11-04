@@ -11,6 +11,7 @@ $bg-clr-navigation: #181818;
   flex-direction: column;
   align-items: flex-end;
   padding: 15px;
+  z-index: 100;
 
   @media (min-width: $smq) {
     width: 100%;

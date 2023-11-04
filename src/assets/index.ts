@@ -14,6 +14,8 @@ import reactqueryIcon from "./techIcons/reactqueryIcon.svg";
 import sassIcon from "./techIcons/sassIcon.svg";
 import typescriptIcon from "./techIcons/typescriptIcon.svg";
 import unrealengineIcon from "./techIcons/unrealengineIcon.svg";
-import fingmaIcon from "./techIcons/figmaIcon.svg"
+import figmaIcon from "./techIcons/figmaIcon.svg"
+import photoshopIcon from "./techIcons/photoshopIcon.svg"
+import premiere_proIcon from "./techIcons/premiere_proIcon.svg"
 
-export {fingmaIcon, cssIcon, dockerIcon, githubIcon, godotIcon, googlecloudIcon, htmlIcon, jiraIcon, jsIcon, mongoIcon, nodejsIcon, postmanIcon, reactIcon, reactqueryIcon, sassIcon, typescriptIcon, unrealengineIcon };
+export { photoshopIcon, premiere_proIcon, figmaIcon, cssIcon, dockerIcon, githubIcon, godotIcon, googlecloudIcon, htmlIcon, jiraIcon, jsIcon, mongoIcon, nodejsIcon, postmanIcon, reactIcon, reactqueryIcon, sassIcon, typescriptIcon, unrealengineIcon };
