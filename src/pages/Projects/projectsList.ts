@@ -1,4 +1,5 @@
 import financeLiteracyImage from "../../assets/thumbnails/finance_literacy_img.png";
+import placeholderImage from "../../assets/thumbnails/placeholderImage.png"
 
 export const projects = [
   {
@@ -13,9 +14,9 @@ export const projects = [
         availableForPublic: true,
       },
       {
-        title: "Quiz App",
+        title: "QR & Quiz App",
         description: "Some random text will be here about app",
-        img: "",
+        img: placeholderImage,
         video: "",
         liveSiteURL: "https://quiz-bwrd.netlify.app/",
         availableForPublic: true,
@@ -23,7 +24,7 @@ export const projects = [
       {
         title: "Generators",
         description: "Some random text will be here about app",
-        img: "",
+        img: placeholderImage,
         video: "",
         liveSiteURL: "",
         availableForPublic: true,
@@ -31,7 +32,7 @@ export const projects = [
       {
         title: "Internal Linker System",
         description: "Some random text will be here about app",
-        img: "",
+        img: placeholderImage,
         video: "",
         liveSiteURL: "",
         availableForPublic: false,

@@ -6,30 +6,21 @@
   min-height: 100svh;
   text-align: left;
 
+
   @media (max-width: $mmq) {
-    @include flex-center(column);
-    flex-direction: column-reverse;
+    @include flex-center(row);
     gap: 1rem;
-  }
-
-  &__image {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    background-color: goldenrod;
-
-    @media (max-width: $mmq) {
-      width: 150px;
-      height: 150px;
-    }
   }
 
   &__info {
+    margin-top: $navigationHeight;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
     gap: 1rem;
-    width: 60%;
+    padding: 1rem;
+    width: 70%;
 
     @media (max-width: $smq) {
       width: 100%;
@@ -41,7 +32,7 @@
       font-size: 16px;
       font-weight: 600;
       font-style: italic;
-      line-height: 1;
+      line-height: 2;
 
       @media (max-width: $smq) {
         font-size: 14px;
@@ -62,11 +53,12 @@
     }
 
     &__job {
-      font-size: 70px;
+      font-size: 60px;
       color: gray;
+      line-height: 1.25;
 
       @media (max-width: $mmq) {
-        font-size: 50px;
+        font-size: 40px;
       }
 
       @media (max-width: $smq) {
