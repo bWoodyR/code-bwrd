@@ -10,7 +10,7 @@ const Intro = ({ setSelectedSection }: Props) => {
       <div className="intro__info">
         <div>
           <p>Hi, my name is</p>
-          <h1 className="intro__info__name">Roman Ďurek</h1>
+          <h1 className="intro__info__name underline">Roman Ďurek</h1>
         </div>
         <h2 className="intro__info__job">Aspiring Frontend Developer</h2>
         <p className="intro__info__description">

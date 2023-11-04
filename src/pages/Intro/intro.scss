@@ -1,5 +1,22 @@
 @use "../../scss/index" as *;
 
+.underline {
+  position: relative;
+  outline: 2px solid green;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  background-image: url("../../assets/underline.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1rem;
+  width: 100%
+}
+
 .intro {
   @include flex-center(row);
   // min-height: calc(100svh + $navigationHeight);
