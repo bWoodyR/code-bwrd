@@ -1,5 +1,5 @@
 import "./socials.scss";
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { socials } from "./socialsList";
 import { useScreenSize } from "../../hooks/useScreenSize";
 
@@ -19,7 +19,6 @@ const Socials = () => {
 
 const SocialItem = ({ title, icon, color, url, windowSize }: { title: string; icon: React.ReactNode; color: string; url: string; windowSize: { width: number; height: number } }) => {
   const [showText, setShowText] = useState(false);
-  const socialItemRef = useRef<HTMLAnchorElement>(null);
 
   const showFullSocialItem = () => {
     setShowText(true);
@@ -30,7 +29,7 @@ const SocialItem = ({ title, icon, color, url, windowSize }: { title: string; ic
   };
 
   return (
-    <a href={url} target="_blank" className={`socials__item ${showText || windowSize.width < 700 ? "socials__item__selected" : ""}`} style={{ backgroundColor: color }} onMouseEnter={showFullSocialItem} onMouseLeave={hideTextInSocialItem} ref={socialItemRef}>
+    <a href={url} target="_blank" className={`socials__item ${showText || windowSize.width < 700 ? "socials__item__selected" : ""}`} style={{ backgroundColor: color }} onMouseEnter={showFullSocialItem} onMouseLeave={hideTextInSocialItem}>
       {(showText || windowSize.width < 700) && <p>{title}</p>}
       <span className="socials__item__icon">{icon}</span>
     </a>
