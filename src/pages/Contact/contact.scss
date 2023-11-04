@@ -5,7 +5,7 @@
   min-height: 100svh;
   width: 100%;
 
-  @media (max-width: $smq) {
+  @media (max-width: $smq) or (max-height: 420px) {
     padding: 2rem 0;
   }
 

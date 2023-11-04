@@ -5,9 +5,10 @@
   min-height: 100svh;
   background-color: #2f2f2f;
 
-  @media (max-width: $smq) {
+  @media (max-width: $smq) or (max-height: 420px) {
     padding: 2rem 0;
   }
+
 
   &__header {
     @include sectionHeader();

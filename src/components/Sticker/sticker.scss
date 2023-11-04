@@ -18,7 +18,7 @@
 
   @media (max-width: $mmq) {
     transform: rotate(0);
-    top: calc($navigationHeight);
+    top: $navigationHeight;
     left: 0;
     border-radius: 0px 0 20px 0;
   }
@@ -27,5 +27,13 @@
     transform: rotate(0);
     top: 0;
     left: 0;
+  }
+
+  @media (max-height: 420px) {
+    transform: rotate(0);
+    left: unset;
+    top: $navigationHeight;
+    right: 0;
+    border-radius: 0px 0 0 20px;
   }
 }

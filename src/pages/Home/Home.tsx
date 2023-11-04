@@ -4,6 +4,7 @@ import "./home.scss";
 import Navigation from "../../components/Navigation/Navigation";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { useBrowserCheck } from "../../hooks/useBrowserCheck";
 
 const Home = () => {
   const introRef = useRef<HTMLElement>(null);
@@ -12,6 +13,7 @@ const Home = () => {
   const projectsRef = useRef<HTMLElement>(null);
   const contactRef = useRef<HTMLElement>(null);
   const [selectedSection, setSelectedSection] = useState("");
+  useBrowserCheck()
 
   useEffect(() => {
     const scrollToRef = (ref: React.RefObject<HTMLElement>) => {
