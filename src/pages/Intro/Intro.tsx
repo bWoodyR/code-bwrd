@@ -17,7 +17,7 @@ const Intro = ({ setSelectedSection }: Props) => {
           I'm a budding Frontend Developer with a keen interest in creating engaging digital interfaces. My current focus lies in harnessing the power of React to build responsive and dynamic web applications. Driven by a passion for problem-solving and a thirst for knowledge, I am dedicated to
           perfecting the art of crafting seamless user experiences and intuitive designs.
         </p>
-        <button className="intro__info__projects-btn" onClick={() => setSelectedSection("projects")}>
+        <button className="intro__info__projects-btn" onClick={() => setSelectedSection("projects")} type="button">
           Check my work
         </button>
       </div>
