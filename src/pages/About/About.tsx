@@ -8,6 +8,10 @@ const About = () => {
       text: "Currently based in Slovakia (TN)",
     },
     {
+      title: "Education",
+      text: "Pursuing studies at the University of Ss. Cyril and Methodius in Trnava (SK) in the field of Mass Media Communication, with a focus on the Theory of Digital Games.",
+    },
+    {
       title: "Passion for Software Development",
       text: "I'm passionate about building software that improves the lives of those around me as well as others.",
     },
