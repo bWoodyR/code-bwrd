@@ -23,7 +23,7 @@ const ProjectCard = ({ title, usedTechImages, description, img, video, liveSiteU
         })}
       </div>
       <hr />
-      <p className="test">
+      <p className="projectCard__description">
         {showFullDescription ? description : `${description?.substring(0, 150)}...`}
         <button className="projectCard__description-btn" onClick={() => setShowFullDescrption(!showFullDescription)}>
           {showFullDescription ? "Hide" : "Show more"}
@@ -37,6 +37,7 @@ const ProjectCard = ({ title, usedTechImages, description, img, video, liveSiteU
             {type === "web" ? "Live site" : "Download"}
           </a>
         )}
+        {!availableForPublic && <p className="projectCard__notAvailableForPublic">Due to the sensitive nature of the content, the live site cannot be displayed publicly.</p>}
       </div>
     </div>
   );

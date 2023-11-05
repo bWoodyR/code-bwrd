@@ -1,22 +1,19 @@
 import financeLiteracyImage from "../../assets/thumbnails/finance_literacy_img.png";
-import linkerImage from "../../assets/thumbnails/linker_img.png"
-import generatorsImage from "../../assets/thumbnails/generators_img.png"
+import linkerImage from "../../assets/thumbnails/linker_img.png";
+import generatorsImage from "../../assets/thumbnails/generators_img.png";
 import placeholderImage from "../../assets/thumbnails/placeholderImage.png";
 import unreaclEnginIcon from "../../assets/techIcons/unrealengineIcon.svg";
 import godotIcon from "../../assets/techIcons/godotIcon.svg";
 import reactIcon from "../../assets/techIcons/reactIcon.svg";
 import typescriptIcon from "../../assets/techIcons/typescriptIcon.svg";
 import reactQueryIcon from "../../assets/techIcons/reactqueryIcon.svg";
-import sassIcon from "../../assets/techIcons/sassIcon.svg"
+import sassIcon from "../../assets/techIcons/sassIcon.svg";
 import mongoIcon from "../../assets/techIcons/mongodbIcon.svg";
 import dockerIcon from "../../assets/techIcons/dockerIcon.svg";
 import googleCloud from "../../assets/techIcons/googlecloudIcon.svg";
 import jsIcon from "../../assets/techIcons/jsIcon.svg";
 import htmlIcon from "../../assets/techIcons/htmlIcon.svg";
 import cssIcon from "../../assets/techIcons/cssIcon.svg";
-
-
-
 
 export const projects = [
   {
@@ -26,7 +23,7 @@ export const projects = [
         title: "Finance Literacy Game",
         usedTechImgs: [reactIcon, typescriptIcon, reactQueryIcon, sassIcon, mongoIcon, dockerIcon, googleCloud],
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim aut repellat nostrum quas laboriosam sed provident blanditiis quo nemo omnis, quaerat exercitationem fugiat placeat eum obcaecati numquam. Perferendis praesentium cupiditate maxime, illo repudiandae quis. Officiis excepturi, suscipit, corporis sint minima necessitatibus eum amet obcaecati velit voluptates odio error. Soluta, consequuntur.",
+          "Game is designed to offer players an interactive experience in managing their finances through engaging life-based scenarios. By providing a series of financial challenges, the game aims to enhance players' financial decision-making skills. Game offers detailed charts and data visualizations, providing players with a comprehensive overview of their financial progress.",
         img: financeLiteracyImage,
         video: "",
         liveSiteURL: "https://fmk.bwrd.eu",
@@ -36,7 +33,7 @@ export const projects = [
         title: "QR & Quiz App",
         usedTechImgs: [reactIcon, typescriptIcon, sassIcon],
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim aut repellat nostrum quas laboriosam sed provident blanditiis quo nemo omnis, quaerat exercitationem fugiat placeat eum obcaecati numquam. Perferendis praesentium cupiditate maxime, illo repudiandae quis. Officiis excepturi, suscipit, corporis sint minima necessitatibus eum amet obcaecati velit voluptates odio error. Soluta, consequuntur.",
+          "The Quiz App project introduces a dynamic and engaging way for users to participate in various quizzes which are displayed based on the QR code scanned. Upon submission, the app provides users with a breakdown of their correct and incorrect answers, along with a point system to gauge their performance.",
         img: placeholderImage,
         video: "",
         liveSiteURL: "https://quiz-bwrd.netlify.app/",
@@ -46,17 +43,17 @@ export const projects = [
         title: "Generators",
         usedTechImgs: [reactIcon, typescriptIcon, cssIcon],
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim aut repellat nostrum quas laboriosam sed provident blanditiis quo nemo omnis, quaerat exercitationem fugiat placeat eum obcaecati numquam. Perferendis praesentium cupiditate maxime, illo repudiandae quis. Officiis excepturi, suscipit, corporis sint minima necessitatibus eum amet obcaecati velit voluptates odio error. Soluta, consequuntur.",
+          "Made specifically for the company I work for as a software tester, this comprehensive generator tool simplifies our daily tasks. It allows for customizable Lorem Ipsum text generation with adjustable paragraph and character counts, and the creation of random birth numbers for both mens and womens. The project also incorporates a straightforward daily report list feature.",
         img: generatorsImage,
         video: "",
         liveSiteURL: "https://bwrd.eu/#/tipsport",
         availableForPublic: true,
       },
       {
-        title: "Internal Linker System",
+        title: "Linker App",
         usedTechImgs: [jsIcon, htmlIcon, cssIcon],
         description:
-          "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim aut repellat nostrum quas laboriosam sed provident blanditiis quo nemo omnis, quaerat exercitationem fugiat placeat eum obcaecati numquam. Perferendis praesentium cupiditate maxime, illo repudiandae quis. Officiis excepturi, suscipit, corporis sint minima necessitatibus eum amet obcaecati velit voluptates odio error. Soluta, consequuntur.",
+          "Crafted during my time as a customer technical support representative, this project aimed to streamline our diagnostic processes by consolidating various tools into one simple linking application. It also featured an organized collection of manuals and essential resources, neatly sorted into relevant categories for quick and easy access.",
         img: linkerImage,
         video: "",
         liveSiteURL: "",

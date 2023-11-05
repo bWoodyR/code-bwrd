@@ -3,7 +3,7 @@
 .about {
   @include flex-center(column);
   min-height: 100svh;
-  background-color: #2f2f2f;
+  background-color: $bg-secondary;
 
   @media (max-width: $smq) or (max-height: 420px) {
     padding: 2rem 0;
@@ -35,7 +35,7 @@
     &__left {
       font-size: 25px;
       width: 50%;
-      background-color: #181818;
+      background-color: $bg-code;
       padding: 1rem;
       border-radius: 10px;
       font-family: "Fira Code", monospace;

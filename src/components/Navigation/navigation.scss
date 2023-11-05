@@ -1,12 +1,10 @@
 @use "../../scss/index" as *;
 
-$bg-clr-navigation: #181818;
-
 .navigation {
   position: fixed;
   width: 100%;
   min-height: $navigationHeight;
-  background-color: $bg-clr-navigation;
+  background-color: $bg-nav;
   display: flex;
   flex-direction: column;
   align-items: flex-end;  
@@ -16,7 +14,7 @@ $bg-clr-navigation: #181818;
   @media (min-width: $smq) {
     width: 100%;
     min-height: $navigationHeight;
-    background-color: $bg-clr-navigation;
+    background-color: $bg-nav;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +47,7 @@ $bg-clr-navigation: #181818;
 
   &__list {
     flex-direction: column;
-    background-color: $bg-clr-navigation;
+    background-color: $bg-nav;
     min-width: 100%;
     text-align: center;
 
@@ -70,11 +68,11 @@ $bg-clr-navigation: #181818;
       padding: 0.5rem;
       font-family: "Fira Code", monospace;
 
-      color: goldenrod;
+      color: $clr-primary;
       @media (min-width: $smq) {
         &:hover {
-          color: orange;
-          border-bottom: 2px solid orange;
+          color: $clr-secondary;
+          border-bottom: 2px solid $clr-secondary;
         }
       }
     }

@@ -11,7 +11,7 @@
     left: 0;
     transform: translate(0, 0);
     position: relative;
-    background-color: #181818;
+    background-color: $bg-nav;
     padding: 1rem;
   }
 
@@ -27,7 +27,7 @@
     @include flex-center(row);
     width: 48px;
     height: 48px;
-    color: white;
+    color: $clr-default;
     cursor: pointer;
     transition: all 0.2s ease;
 

@@ -1,4 +1,4 @@
-@use "../../scss//index" as *;
+@use "../../scss/index" as *;
 
 .contact {
   @include flex-center(column);
@@ -27,7 +27,7 @@
 
   &__error {
     background-color: rgb(44, 29, 27);
-    color: tomato;
+    color: $clr-error;
     padding: 0.5rem;
     border-radius: 10px;
     transition: all 0.2s ease;
@@ -46,15 +46,15 @@
     & input {
       width: 100%;
       padding: 0.5rem 1rem;
-      color: white;
-      caret-color: white;
+      color: $clr-default;
+      caret-color: $clr-default;
       border: none;
       border-radius: 5px;
-      background: rgba($color: #181818, $alpha: 0.75);
+      background: rgba($color: $bg-nav, $alpha: 0.75);
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
       &:focus {
-        outline: 1px solid orange;
+        outline: 1px solid $clr-secondary;
       }
     }
 
@@ -62,16 +62,16 @@
       width: 100%;
       height: 200px;
       padding: 0.5rem 1rem;
-      color: white;
-      caret-color: white;
+      color: $clr-default;
+      caret-color: $clr-default;
       resize: none;
       border: none;
       border-radius: 5px;
-      background: rgba($color: #181818, $alpha: 0.75);
+      background: rgba($color: $bg-nav, $alpha: 0.75);
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
       &:focus {
-        outline: 1px solid orange;
+        outline: 1px solid $clr-secondary;
       }
     }
 
@@ -82,20 +82,21 @@
       gap: 0.25rem;
       border: none;
       background: none;
-      outline: 2px solid white;
+      color: $clr-default;
+      outline: 2px solid $clr-default;
       padding: 0.25rem 2rem;
       border-radius: 10px;
       transition: all 0.2s ease;
       cursor: pointer;
 
       &:hover {
-        color: orange;
-        outline: 2px solid orange;
+        color: $clr-secondary;
+        outline: 2px solid $clr-secondary;
       }
 
       &.disabled {
-        outline: 2px solid gray;
-        color: gray;
+        outline: 2px solid $clr-disabled;
+        color: $clr-disabled;
         pointer-events: none;
         cursor: default;
       }

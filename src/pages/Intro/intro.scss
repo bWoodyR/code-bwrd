@@ -67,7 +67,7 @@ $extraSmallResolution: 385px;
     }
 
     & p:nth-child(1) {
-      color: goldenrod;
+      color: $clr-primary;
       font-size: 16px;
       font-weight: 600;
       font-style: italic;
@@ -93,7 +93,7 @@ $extraSmallResolution: 385px;
 
     &__job {
       font-size: 60px;
-      color: gray;
+      color: $clr-gray;
       line-height: 1.25;
 
       @media (max-width: $mmq) {
@@ -107,7 +107,7 @@ $extraSmallResolution: 385px;
 
     &__description {
       font-size: 18px;
-      color: gray;
+      color: $clr-gray;
       @media (max-width: $mmq) {
         font-size: 16px;
       }
@@ -121,16 +121,16 @@ $extraSmallResolution: 385px;
       margin-top: 2rem;
       background: none;
       border: none;
-      color: white;
-      outline: 2px solid white;
+      color: $clr-default;
+      outline: 2px solid $clr-default;
       padding: 0.5rem 3rem;
       border-radius: 20px;
       cursor: pointer;
       transition: all 0.2s ease;
 
       &:hover {
-        color: orange;
-        outline: 2px solid orange;
+        color: $clr-secondary;
+        outline: 2px solid $clr-secondary;
       }
 
       @media (max-width: $extraSmallResolution) {

@@ -1,3 +1,17 @@
+$clr-default: white;
+$clr-primary: goldenrod;
+$clr-secondary: orange;
+$clr-error: tomato;
+$clr-success: yellowgreen;
+$clr-disabled: gray;
+$clr-gray: gray;
+$clr-black: black;
+
+$bg-primary: #242424;
+$bg-secondary: #2f2f2f;
+$bg-nav: #181818;
+$bg-code: #181818;
+
 $navigationHeight: 70px;
 $smq: 700px;
 $mmq: 900px;
@@ -17,7 +31,6 @@ $mmq: 900px;
   gap: 0.5rem;
   padding: 2rem 0;
   text-align: center;
-
 }
 
 @mixin sectionTitle {
