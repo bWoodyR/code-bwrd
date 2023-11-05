@@ -24,7 +24,7 @@ const ProjectCard = ({ title, usedTechImages, description, img, video, liveSiteU
       </div>
       <hr />
       <p className="test">
-        {showFullDescription ? description : `${description?.substring(0, 200)}...`}
+        {showFullDescription ? description : `${description?.substring(0, 150)}...`}
         <button className="projectCard__description-btn" onClick={() => setShowFullDescrption(!showFullDescription)}>
           {showFullDescription ? "Hide" : "Show more"}
         </button>
