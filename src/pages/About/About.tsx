@@ -5,7 +5,7 @@ const About = () => {
   const aboutMeList = [
     {
       title: "Location",
-      text: "Currently based in Slovakia (TN)",
+      text: "Currently based in Trenčín (SK)",
     },
     {
       title: "Education",
