@@ -1,0 +1,19 @@
+@use "../../scss/index" as *;
+
+.error {
+  min-height: 100svh;
+  @include flex-center(column);
+  gap: 1rem;
+
+  &__message {
+    color: tomato;
+    padding: 1rem;
+    background-color: rgb(90, 28, 17);
+    border-radius: 10px;
+    font-size: 18px;
+  }
+
+  &__redirectLink {
+    color: $clr-default;
+  }
+}
