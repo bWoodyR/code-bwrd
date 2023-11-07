@@ -3,22 +3,22 @@ import "./projectCard.scss";
 
 type Props = {
   title: string;
-  usedTechImages: string[];
-  description?: string;
-  img?: string;
-  video?: string;
+  usedTechImgs: string[];
+  description: string;
+  img: string;
+  video: string;
   liveSiteURL: string;
   type: string;
   availableForPublic: boolean;
 };
 
-const ProjectCard = ({ title, usedTechImages, description, img, video, liveSiteURL, type, availableForPublic }: Props) => {
+const ProjectCard = ({ title, usedTechImgs, description, img, video, liveSiteURL, type, availableForPublic }: Props) => {
   const [showFullDescription, setShowFullDescrption] = useState(false);
   return (
     <div className="projectCard">
       <h1>{title}</h1>
       <div className="projectCard__usedTechImgs">
-        {usedTechImages.map((techImg, index) => {
+        {usedTechImgs.map((techImg, index) => {
           return <img key={index} src={techImg} className="projectCard__usedTechImgs__img"></img>;
         })}
       </div>

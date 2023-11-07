@@ -14,7 +14,7 @@ const Experience = () => {
         {technologies.map((technology) => {
           return (
             <div key={technology.type} className="experience__technology">
-              <SubheaderTitle title={technology.type.toUpperCase()} />
+              <SubheaderTitle title={technology.type} />
               <div className="experience__technology__items">
                 {technology.technologies.map((item) => {
                   return <TechnologyCard key={item.title} img={item.img} title={item.title} />;

@@ -5,7 +5,7 @@ type Props = {
 };
 
 const SubheaderTitle = ({ title }: Props) => {
-  return <h2 className="subheaderTitle">{title}</h2>;
+  return <h2 className="subheaderTitle">{title.toUpperCase()}</h2>;
 };
 
 export default SubheaderTitle;
