@@ -1,19 +1,8 @@
+import { unrealengineIcon, godotIcon, reactIcon, typescriptIcon, reactqueryIcon, sassIcon, mongoIcon, dockerIcon, googlecloudIcon, jsIcon, htmlIcon, cssIcon } from "../../assets";
 import financeLiteracyImage from "../../assets/thumbnails/finance_literacy_img.png";
 import linkerImage from "../../assets/thumbnails/linker_img.png";
 import generatorsImage from "../../assets/thumbnails/generators_img.png";
 import placeholderImage from "../../assets/thumbnails/placeholderImage.png";
-import unreaclEnginIcon from "../../assets/techIcons/unrealengineIcon.svg";
-import godotIcon from "../../assets/techIcons/godotIcon.svg";
-import reactIcon from "../../assets/techIcons/reactIcon.svg";
-import typescriptIcon from "../../assets/techIcons/typescriptIcon.svg";
-import reactQueryIcon from "../../assets/techIcons/reactqueryIcon.svg";
-import sassIcon from "../../assets/techIcons/sassIcon.svg";
-import mongoIcon from "../../assets/techIcons/mongodbIcon.svg";
-import dockerIcon from "../../assets/techIcons/dockerIcon.svg";
-import googleCloud from "../../assets/techIcons/googlecloudIcon.svg";
-import jsIcon from "../../assets/techIcons/jsIcon.svg";
-import htmlIcon from "../../assets/techIcons/htmlIcon.svg";
-import cssIcon from "../../assets/techIcons/cssIcon.svg";
 
 export const projects = [
   {
@@ -21,7 +10,7 @@ export const projects = [
     projects: [
       {
         title: "Finance Literacy Game",
-        usedTechImgs: [reactIcon, typescriptIcon, reactQueryIcon, sassIcon, mongoIcon, dockerIcon, googleCloud],
+        usedTechImgs: [reactIcon, typescriptIcon, reactqueryIcon, sassIcon, mongoIcon, dockerIcon, googlecloudIcon],
         description:
           "Game is designed to offer players an interactive experience in managing their finances through engaging life-based scenarios. By providing a series of financial challenges, the game aims to enhance players' financial decision-making skills. Game offers detailed charts and data visualizations, providing players with a comprehensive overview of their financial progress.",
         img: financeLiteracyImage,
@@ -66,7 +55,7 @@ export const projects = [
     projects: [
       {
         title: "5 Nights To Live",
-        usedTechImgs: [unreaclEnginIcon],
+        usedTechImgs: [unrealengineIcon],
         description:
           "Immerse yourself in a thrilling adventure. '5 Nights To Live' is a heart-pounding first-person shooter game that thrusts players into a dense, foreboding forest. Battle for survival as you confront nightly onslaughts of relentless zombies, putting your skills and wits to the ultimate test.",
         img: "",
@@ -76,7 +65,7 @@ export const projects = [
       },
       {
         title: "Crystal Hunter",
-        usedTechImgs: [unreaclEnginIcon],
+        usedTechImgs: [unrealengineIcon],
         description:
           "Crafted during the TEDI Game Jam #25, 'Crystal Hunter' is a thrilling adventure game that runs on the powerful Unreal Engine 5. Embark on an exciting journey to collect precious crystals while navigating through immersive levels filled with challenging obstacles. Can you conquer the game and emerge as the ultimate Crystal Hunter?",
         img: "",
