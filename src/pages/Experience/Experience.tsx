@@ -17,7 +17,7 @@ const Experience = () => {
               <SubheaderTitle title={technology.type} />
               <div className="experience__technology__items">
                 {technology.technologies.map((item) => {
-                  return <TechnologyCard key={item.title} img={item.img} title={item.title} />;
+                  return <TechnologyCard key={item.title} {...item} />;
                 })}
               </div>
             </div>

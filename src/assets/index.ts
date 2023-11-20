@@ -17,5 +17,6 @@ import unrealengineIcon from "./techIcons/unrealengineIcon.svg";
 import figmaIcon from "./techIcons/figmaIcon.svg"
 import photoshopIcon from "./techIcons/photoshopIcon.svg"
 import premiere_proIcon from "./techIcons/premiere_proIcon.svg"
+import vueIcon from "./techIcons/vueIcon.svg"
 
-export { photoshopIcon, premiere_proIcon, figmaIcon, cssIcon, dockerIcon, githubIcon, godotIcon, googlecloudIcon, htmlIcon, jiraIcon, jsIcon, mongoIcon, nodejsIcon, postmanIcon, reactIcon, reactqueryIcon, sassIcon, typescriptIcon, unrealengineIcon };
+export {vueIcon, photoshopIcon, premiere_proIcon, figmaIcon, cssIcon, dockerIcon, githubIcon, godotIcon, googlecloudIcon, htmlIcon, jiraIcon, jsIcon, mongoIcon, nodejsIcon, postmanIcon, reactIcon, reactqueryIcon, sassIcon, typescriptIcon, unrealengineIcon };
