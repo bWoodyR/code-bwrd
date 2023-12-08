@@ -29,7 +29,7 @@ const ProjectCard = ({ title, usedTechImgs, description, img, video, liveSiteURL
           {showFullDescription ? "Hide" : "Show more"}
         </button>
       </p>
-      {img && <img src={img} alt={`${title}-project-image`}></img>}
+      {img && <img src={img} alt={`${title}-project-image`} className="projectCard__thumbnail"></img>}
       {video && <iframe width={325} height={200} src={video} title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>}
       <div className="projectCard__btn-container">
         {availableForPublic && (

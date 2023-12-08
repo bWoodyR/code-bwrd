@@ -2,7 +2,8 @@ import { unrealengineIcon, godotIcon, reactIcon, typescriptIcon, reactqueryIcon,
 import financeLiteracyImage from "../../assets/thumbnails/finance_literacy_img.png";
 import linkerImage from "../../assets/thumbnails/linker_img.png";
 import generatorsImage from "../../assets/thumbnails/generators_img.png";
-import placeholderImage from "../../assets/thumbnails/placeholderImage.png";
+// import placeholderImage from "../../assets/thumbnails/placeholderImage.png";
+import quizImg from "../../assets/thumbnails/quizImg.png";
 
 export const projects = [
   {
@@ -16,16 +17,18 @@ export const projects = [
         img: financeLiteracyImage,
         video: "",
         liveSiteURL: "https://fmk.bwrd.eu",
+        demoSiteURL: "",
         availableForPublic: true,
       },
       {
         title: "QR & Quiz App",
-        usedTechImgs: [reactIcon, typescriptIcon, sassIcon],
+        usedTechImgs: [reactIcon, typescriptIcon, reactqueryIcon, sassIcon],
         description:
-          "The Quiz App project introduces a dynamic and engaging way for users to participate in various quizzes which are displayed based on the QR code scanned. Upon submission, the app provides users with a breakdown of their correct and incorrect answers, along with a point system to gauge their performance.",
-        img: placeholderImage,
+          "Created an engaging mobile-centric quiz app for cities Puchov and Uherske Hradiste based on given UX design, encouraging users to explore parks by scanning QR codes for questions about their surroundings. Quiz includes multiple different question kinds. The project also included a simple admin system with users and their progress.",
+        img: quizImg,
         video: "",
-        liveSiteURL: "https://quiz-bwrd.netlify.app/",
+        liveSiteURL: "https://kvizovahra.sk/",
+        demoSiteURL: "",
         availableForPublic: true,
       },
       {
@@ -36,6 +39,7 @@ export const projects = [
         img: generatorsImage,
         video: "",
         liveSiteURL: "https://bwrd.eu/#/tipsport",
+        demoSiteURL: "",
         availableForPublic: true,
       },
       {
@@ -46,6 +50,7 @@ export const projects = [
         img: linkerImage,
         video: "",
         liveSiteURL: "",
+        demoSiteURL: "",
         availableForPublic: false,
       },
     ],
@@ -61,6 +66,7 @@ export const projects = [
         img: "",
         video: "https://www.youtube.com/embed/CY64diSC2Rg?si=PUTQkDd9IMhzKCcr",
         liveSiteURL: "https://roman-bwoody-durek.itch.io/5-nights-to-live",
+        demoSiteURL: "",
         availableForPublic: true,
       },
       {
@@ -71,6 +77,7 @@ export const projects = [
         img: "",
         video: "https://www.youtube.com/embed/_4y_Be1iaKQ?si=HlgySpobo_fVqPpx",
         liveSiteURL: "https://roman-bwoody-durek.itch.io/crystal-hunter",
+        demoSiteURL: "",
         availableForPublic: true,
       },
       {
@@ -81,6 +88,7 @@ export const projects = [
         img: "",
         video: "https://www.youtube.com/embed/ef8uVD6Uq-k?si=X9pyGCJx3GOegxFL",
         liveSiteURL: "",
+        demoSiteURL: "",
         availableForPublic: true,
       },
     ],

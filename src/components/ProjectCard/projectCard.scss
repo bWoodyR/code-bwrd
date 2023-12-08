@@ -86,6 +86,10 @@
     }
   }
 
+  &__thumbnail {
+    height: 175px;
+  }
+
   &__notAvailableForPublic {
     color: $clr-error;
   }
