@@ -1,0 +1,11 @@
+@use "../../scss/index" as *;
+
+.project {
+  &__usedTechImgs {
+    display: flex;
+    gap: 1rem;
+    &__item {
+      @include techCard();
+    }
+  }
+}

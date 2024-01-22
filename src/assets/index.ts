@@ -14,9 +14,12 @@ import reactqueryIcon from "./techIcons/reactqueryIcon.svg";
 import sassIcon from "./techIcons/sassIcon.svg";
 import typescriptIcon from "./techIcons/typescriptIcon.svg";
 import unrealengineIcon from "./techIcons/unrealengineIcon.svg";
-import figmaIcon from "./techIcons/figmaIcon.svg"
-import photoshopIcon from "./techIcons/photoshopIcon.svg"
-import premiere_proIcon from "./techIcons/premiere_proIcon.svg"
-import vueIcon from "./techIcons/vueIcon.svg"
+import figmaIcon from "./techIcons/figmaIcon.svg";
+import photoshopIcon from "./techIcons/photoshopIcon.svg";
+import premiere_proIcon from "./techIcons/premiere_proIcon.svg";
+import vueIcon from "./techIcons/vueIcon.svg";
+import nextjsIcon from "./techIcons/nextjsIcon.svg";
+import tailwindIcon from "./techIcons/tailwindcssIcon.svg";
+import prismaIcon from "./techIcons/prisma.svg"
 
-export {vueIcon, photoshopIcon, premiere_proIcon, figmaIcon, cssIcon, dockerIcon, githubIcon, godotIcon, googlecloudIcon, htmlIcon, jiraIcon, jsIcon, mongoIcon, nodejsIcon, postmanIcon, reactIcon, reactqueryIcon, sassIcon, typescriptIcon, unrealengineIcon };
+export { prismaIcon,nextjsIcon, tailwindIcon, vueIcon, photoshopIcon, premiere_proIcon, figmaIcon, cssIcon, dockerIcon, githubIcon, godotIcon, googlecloudIcon, htmlIcon, jiraIcon, jsIcon, mongoIcon, nodejsIcon, postmanIcon, reactIcon, reactqueryIcon, sassIcon, typescriptIcon, unrealengineIcon };

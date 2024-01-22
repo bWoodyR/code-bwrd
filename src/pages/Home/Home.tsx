@@ -1,19 +1,22 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useContext } from "react";
 import { Intro, About, Experience, Projects, Contact, Socials } from "../../components";
 import "./home.scss";
 import Navigation from "../../components/Navigation/Navigation";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useBrowserCheck } from "../../hooks/useBrowserCheck";
+import { AppContext } from "../../services/Context/AppContext";
+import { ACTION_TYPES } from "../../services/Context/appReducer";
 
 const Home = () => {
+  const { state, dispatch } = useContext(AppContext);
   const introRef = useRef<HTMLElement>(null);
   const aboutRef = useRef<HTMLElement>(null);
   const experienceRef = useRef<HTMLElement>(null);
   const projectsRef = useRef<HTMLElement>(null);
   const contactRef = useRef<HTMLElement>(null);
   const [selectedSection, setSelectedSection] = useState("");
-  useBrowserCheck()
+  useBrowserCheck();
 
   useEffect(() => {
     const scrollToRef = (ref: React.RefObject<HTMLElement>) => {
@@ -23,23 +26,30 @@ const Home = () => {
       }
     };
 
-    switch (selectedSection) {
-      case "intro":
-        scrollToRef(introRef);
-        break;
-      case "about":
-        scrollToRef(aboutRef);
-        break;
-      case "experience":
-        scrollToRef(experienceRef);
-        break;
-      case "projects":
-        scrollToRef(projectsRef);
-        break;
-      case "contact":
-        scrollToRef(contactRef);
-        break;
+    if (state.previousPage === "/projects") {
+      scrollToRef(projectsRef);
+      setSelectedSection("projects");
+      dispatch({ type: ACTION_TYPES.SAVE_PREVIOUS_PAGE, payload: "" });
+    } else {
+      switch (selectedSection) {
+        case "intro":
+          scrollToRef(introRef);
+          break;
+        case "about":
+          scrollToRef(aboutRef);
+          break;
+        case "experience":
+          scrollToRef(experienceRef);
+          break;
+        case "projects":
+          scrollToRef(projectsRef);
+          break;
+        case "contact":
+          scrollToRef(contactRef);
+          break;
+      }
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedSection]);
 
   return (
