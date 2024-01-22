@@ -124,22 +124,7 @@ $cardHeight: 325px;
     background-color: rgba($color: $bg-nav, $alpha: 0.95);
     animation-name: opacityAnimation;
     animation-duration: 0.2s;
-    border-radius: 10px;
-
-    &__button {
-      color: $clr-default;
-      background-color: $clr-gray;
-      padding: 0.5rem 2.5rem;
-      border-radius: 5px;
-      text-decoration: none;
-      text-transform: uppercase;
-      transition: all .2s ease;
-
-      &:hover {
-        background-color: $clr-primary;
-        color: $clr-black;
-      }
-    }
+    border-radius: 10px;    
   }
 }
 

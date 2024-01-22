@@ -6,18 +6,18 @@ type Props = {
   title: string;
   path: string;
   usedTechImgs: {
-    img: string, 
-    title: string,
-    labels: string[]
-  }[]; 
+    img: string;
+    title: string;
+    labels: string[];
+  }[];
   img: string;
   video: string;
-  liveSiteURL: string;  
+  liveSiteURL: string;
   availableForPublic: boolean;
-  type: string
+  type: string;
 };
 
-const ProjectCard = ({ title, usedTechImgs,  img, video, liveSiteURL, path, type }: Props) => {
+const ProjectCard = ({ title, usedTechImgs, img, video, liveSiteURL, path, type, availableForPublic }: Props) => {
   const [showHoverButtons, setShowHoverButtons] = useState(false);
 
   return (
@@ -52,22 +52,24 @@ const ProjectCard = ({ title, usedTechImgs,  img, video, liveSiteURL, path, type
           )}
           {!availableForPublic && <p className="projectCard__notAvailableForPublic">Due to the sensitive nature of the content, the live site cannot be displayed publicly.</p>}
         </div> */}
-      {showHoverButtons && !video && <ProjectCardHoverButtons path={path} liveSiteURL={liveSiteURL} type={type} />}
+      {showHoverButtons && !video && <ProjectCardHoverButtons path={path} liveSiteURL={liveSiteURL} type={type} availableForPublic={availableForPublic} />}
     </div>
   );
 };
 
 export default ProjectCard;
 
-const ProjectCardHoverButtons = ({ path, liveSiteURL, type }: { path: string; liveSiteURL: string, type: string }) => {
+const ProjectCardHoverButtons = ({ path, liveSiteURL, type, availableForPublic }: { path: string; liveSiteURL: string; type: string; availableForPublic: boolean }) => {
   return (
     <div className="projectCard__hoverButtons">
-      <Link to={`/projects/${type}/${path}`} className="projectCard__hoverButtons__button">
+      <Link to={`/projects/${type}/${path}`} className="btn btn-primary">
         Details
       </Link>
-      <a href={liveSiteURL} target="_blank" className="projectCard__hoverButtons__button">
-        Live site
-      </a>
+      {availableForPublic && (
+        <a href={liveSiteURL} target="_blank" className="btn btn-primary">
+          Live site
+        </a>
+      )}
     </div>
   );
 };

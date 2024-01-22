@@ -62,7 +62,7 @@ export const projects = [
       {
         title: "Generators",
         path: "generators",
-        usedTechImgs: getUsedTech("web", ["React JS", "Typescript", "React Query", "CSS"]),
+        usedTechImgs: getUsedTech("web", ["React JS", "Typescript", "CSS"]),
         description:
           "Made specifically for the company I work for as a software tester, this comprehensive generator tool simplifies our daily tasks. It allows for customizable Lorem Ipsum text generation with adjustable paragraph and character counts, and the creation of random birth numbers for both mens and womens. The project also incorporates a straightforward daily report list feature.",
         img: generatorsImage,

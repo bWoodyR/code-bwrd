@@ -1,4 +1,4 @@
-$clr-default: white;
+$clr-default: whitesmoke;
 $clr-primary: goldenrod;
 $clr-secondary: orange;
 $clr-error: tomato;
@@ -97,5 +97,41 @@ $mmq: 900px;
     z-index: -1;
     width: 140px;
     height: 140px;
+  }
+}
+
+@mixin btn-primary {
+  color: $clr-default;
+  background-color: $clr-gray;
+  border: none;
+  outline: none;
+  padding: 0.5rem 2.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: $clr-primary;
+    color: $clr-black;
+    cursor: pointer;
+  }
+}
+
+@mixin btn-secondary {
+  color: $clr-primary;
+  background-color: none;
+  border: none;
+  outline: 1px solid $clr-secondary;
+  padding: 0.5rem 2.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+  letter-spacing: 0.1rem;
+
+  &:hover {
+    outline: 1px solid $clr-success;
+    color: $clr-success;
   }
 }

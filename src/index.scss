@@ -1,7 +1,7 @@
-@use "./scss/index" as *;
+@use "./scss/_index" as *;
 
 :root {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -18,4 +18,12 @@
 
 body {
   @include custom-scrollbar();
+}
+
+.btn.btn-primary {
+  @include btn-primary();
+}
+
+.btn.btn-secondary {
+  @include btn-secondary();
 }
