@@ -17,7 +17,11 @@ $widthOfProject: 80%;
     flex-wrap: wrap;
     gap: 1rem;
     width: $widthOfProject;
-    color: red;   
+    color: red;
+
+    @media (max-width: $smq) {
+      width: 100%;
+    }
   }
 
   &__btn-back {
@@ -39,8 +43,11 @@ $widthOfProject: 80%;
     width: $widthOfProject;
     margin-top: 1rem;
 
-    @media (max-width: $xlg) {
+    @media (max-width: $lgmq) {
       flex-direction: column;
+    }
+    @media (max-width: $smq) {
+      width: 100%;
     }
 
     &__left {
@@ -60,7 +67,7 @@ $widthOfProject: 80%;
         font-size: 40px;
         display: none;
 
-        @media (max-width: $xlg) {
+        @media (max-width: $lgmq) {
           display: block;
         }
       }
@@ -70,7 +77,7 @@ $widthOfProject: 80%;
         flex-direction: column;
         gap: 1.5rem;
 
-        @media (max-width: $xlg) {
+        @media (max-width: $lgmq) {
           flex-direction: row;
           flex-wrap: wrap;
         }
@@ -79,7 +86,7 @@ $widthOfProject: 80%;
         border-radius: 10px;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-        @media (max-width: $xlg) {
+        @media (max-width: $lgmq) {
           max-width: 450px;
           max-height: 250px;
         }
@@ -111,6 +118,21 @@ $widthOfProject: 80%;
       padding: 1rem 0;
       white-space: pre-wrap;
       line-height: 1.75;
+
+      &__btn-show-hide {
+        background: none;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        color: $clr-secondary;
+        margin-left: .5rem;
+        transition: all .2s ease;
+
+        &:hover {
+          cursor: pointer;
+          scale: 1.1;
+        }
+      }
     }
 
     &__notAvailableForPublic {

@@ -8,6 +8,7 @@ import { AppContext } from "../../services/Context/AppContext";
 import { ACTION_TYPES } from "../../services/Context/appReducer";
 import { FaArrowLeft, FaHome } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
+import { useScreenSize } from "../../hooks/useScreenSize";
 
 const SingleProject = () => {
   const { dispatch } = useContext(AppContext);
@@ -18,11 +19,14 @@ const SingleProject = () => {
   const [project, setProject] = useState(projectTypeArr[projectIndex]);
   const [nextProjectPath, setNextProjectPath] = useState("");
   const [previousProjectPath, setPreviousProjectPath] = useState("");
+  const [showFullProjectDescription, setShowFullProjectDescription] = useState(false);
+  const { windowSize } = useScreenSize();
 
   useEffect(() => {
     dispatch({ type: ACTION_TYPES.SAVE_PREVIOUS_PAGE, payload: "/projects" });
     scrollTo({ top: 0, left: 0, behavior: "smooth" });
     setProjectIndex(() => projectTypeArr.findIndex((item) => item.path === path));
+    setShowFullProjectDescription(false);
   }, [path, projectTypeArr, dispatch]);
 
   useEffect(() => {
@@ -39,17 +43,28 @@ const SingleProject = () => {
     });
   }, [projectIndex, projectTypeArr]);
 
+  useEffect(() => {
+    if (windowSize.width < 1280) {
+      setShowFullProjectDescription(false);
+    } else setShowFullProjectDescription(true);
+  }, [windowSize.width]);
+
+  useEffect(() => {
+    if (!showFullProjectDescription) {
+      scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    }
+  }, [showFullProjectDescription]);
+
   return (
     <section className="project">
       <div className="project__btn-container">
         <Link to={`/projects/${type}/${previousProjectPath}`} className="btn btn-primary project__btn-back">
-          <FaArrowLeft /> 
+          <FaArrowLeft />
         </Link>
         <Link to="/" className="btn btn-primary project__btn-back">
-          <FaHome /> 
+          <FaHome />
         </Link>
         <Link to={`/projects/${type}/${nextProjectPath}`} className="btn btn-primary project__btn-back">
-          
           <FaArrowRight />
         </Link>
       </div>
@@ -57,7 +72,14 @@ const SingleProject = () => {
       <div className="project__data">
         <div className="project__data__left">
           <h1 className="project__data__title">{project?.title}</h1>
-          <p className="project__data__description">{project?.description}</p>
+          <p className="project__data__description">
+            {showFullProjectDescription ? project.description : `${project?.description.substring(0, 380)}${project.description.length > 380 ? "..." : ""}`}
+            {project.description.length > 380 && windowSize.width < 1280 && (
+              <button className="project__data__description__btn-show-hide" onClick={() => setShowFullProjectDescription(!showFullProjectDescription)}>
+                {showFullProjectDescription ? "Hide" : "Show More"}
+              </button>
+            )}
+          </p>
           {project?.availableForPublic ? (
             <a href={project.video ? project.demoSiteURL : project?.liveSiteURL} target="_blank" className="btn btn-secondary project__btn-live-site">
               {project.video ? "DOWNLOAD" : "LIVE SITE"}
