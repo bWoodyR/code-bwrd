@@ -10,7 +10,7 @@ type Props = {
     title: string;
     labels: string[];
   }[];
-  img: string;
+  img: string[];
   video: string;
   liveSiteURL: string;
   availableForPublic: boolean;
@@ -36,7 +36,7 @@ const ProjectCard = ({ title, usedTechImgs, img, video, liveSiteURL, path, type,
         })}
       </div>
       {/* <hr className="projectCard__devide" /> */}
-      {img && <img src={img} alt={`${title}-project-image`} className="projectCard__thumbnail"></img>}
+      {img.length > 0 && <img src={img[0]} alt={`${title}-project-image`} className="projectCard__thumbnail"></img>}
       {/* <p className="projectCard__description">
         {showFullDescription ? description : `${description?.substring(0, 150)}...`}
         <button className="projectCard__description-btn" onClick={() => setShowFullDescrption(!showFullDescription)}>

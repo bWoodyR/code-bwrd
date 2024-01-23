@@ -30,15 +30,13 @@ const SingleProject = () => {
         <div className="project__data__left">
           <h1 className="project__data__title">{project?.title.toUpperCase()}</h1>
           <p className="project__data__description">{project?.description}</p>
-          <div>
-            {project?.availableForPublic ? (
-              <a href={project?.liveSiteURL} target="_blank" className="btn btn-secondary">
-                LIVE SITE
-              </a>
-            ) : (
-              <p className="project__data__description project__data__notAvailableForPublic">Due to the sensitive nature of the content, the live site cannot be displayed publicly.</p>
-            )}
-          </div>
+          {project?.availableForPublic ? (
+            <a href={project?.liveSiteURL} target="_blank" className="btn btn-secondary project__btn-live-site">
+              LIVE SITE
+            </a>
+          ) : (
+            <p className="project__data__description project__data__notAvailableForPublic">Due to the sensitive nature of the content, the live site cannot be displayed publicly.</p>
+          )}
           <div className="project__usedTechImgs">
             <h2 className="project__usedTechImgs__title">Used Stack</h2>
             <div className="project__usedTechImgs__items">
@@ -55,8 +53,9 @@ const SingleProject = () => {
         </div>
 
         <div className="project__data__right">
-          <img src={project?.img} className="project__data__image"></img>
-          <img src={project?.img} className="project__data__image"></img>
+          {project?.img.map((image) => {
+            return <img key={image} src={image} className="project__data__image"></img>;
+          })}
         </div>
       </div>
     </section>

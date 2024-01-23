@@ -133,5 +133,6 @@ $mmq: 900px;
   &:hover {
     outline: 1px solid $clr-success;
     color: $clr-success;
+    transform: scale(1.05);
   }
 }

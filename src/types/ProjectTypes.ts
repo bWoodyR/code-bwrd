@@ -7,7 +7,7 @@ export type TProjectData = {
     labels: string[];
   }[];
   description: string;
-  img: string;
+  img: string[];
   video: string;
   liveSiteURL: string;
   demoSiteURL: string;
