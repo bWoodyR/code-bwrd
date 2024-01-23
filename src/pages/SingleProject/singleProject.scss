@@ -1,5 +1,7 @@
 @use "../../scss/index" as *;
 
+$widthOfProject: 80%;
+
 .project {
   padding: 1rem;
   display: flex;
@@ -7,6 +9,16 @@
   align-items: center;
   flex-direction: column;
   gap: 1rem;
+
+  &__btn-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: $widthOfProject;
+    color: red;   
+  }
 
   &__btn-back {
     display: flex;
@@ -24,7 +36,12 @@
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
-    width: 80%;
+    width: $widthOfProject;
+    margin-top: 1rem;
+
+    @media (max-width: $xlg) {
+      flex-direction: column;
+    }
 
     &__left {
       flex: 1.5;
@@ -38,18 +55,46 @@
       display: flex;
       flex-direction: column;
       gap: 1.5rem;
+
+      &__title {
+        font-size: 40px;
+        display: none;
+
+        @media (max-width: $xlg) {
+          display: block;
+        }
+      }
+
+      &__image-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        @media (max-width: $xlg) {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+      }
+      &__image {
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        @media (max-width: $xlg) {
+          max-width: 450px;
+          max-height: 250px;
+        }
+
+        @media (max-width: $smq) {
+          width: 100%;
+        }
+      }
     }
 
     &__title {
       font-size: 60px;
       color: $clr-primary;
       line-height: 1;
-    }
-
-    &__image {
-      border-radius: 10px;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      width: 100%;
+      font-style: italic;
     }
 
     &__label {
@@ -62,9 +107,10 @@
 
     &__description {
       font-size: 18px;
-      letter-spacing: 0.1rem;
+      letter-spacing: 0.075rem;
       padding: 1rem 0;
       white-space: pre-wrap;
+      line-height: 1.75;
     }
 
     &__notAvailableForPublic {

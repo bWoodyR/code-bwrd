@@ -15,6 +15,7 @@ $bg-code: #181818;
 $navigationHeight: 70px;
 $smq: 700px;
 $mmq: 900px;
+$xlg: 1600px;
 
 @mixin flex-center($direction: column) {
   display: flex;
@@ -101,20 +102,21 @@ $mmq: 900px;
 }
 
 @mixin btn-primary {
-  color: $clr-default;
-  background-color: $clr-gray;
+ color: $clr-default;
+  background-color: none;
   border: none;
-  outline: none;
-  padding: 0.5rem 2.5rem;
+  outline: 1px solid $clr-default;
+  padding: 0.5rem 1.5rem;
   border-radius: 5px;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.2s ease;
+  letter-spacing: 0.1rem;
 
   &:hover {
-    background-color: $clr-primary;
-    color: $clr-black;
-    cursor: pointer;
+    outline: 1px solid $clr-secondary;
+    color: $clr-secondary;
+    transform: scale(1.05);
   }
 }
 

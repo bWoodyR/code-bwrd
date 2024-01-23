@@ -2,8 +2,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Error from "./pages/Error/Error";
 import MainLayout from "./layouts/MainLayout";
-import SingleProject from "./pages/SingleProject/SingleProject";
 import { AppProvider } from "./services/Context/AppContext";
+import { Suspense, lazy } from "react";
+import LoadingSpinner from "./components/LoadingSpinner/LoadingSpinner";
+
+const SingleProject = lazy(() => import("./pages/SingleProject/SingleProject"));
 
 function App() {
   const router = createBrowserRouter([
@@ -14,14 +17,18 @@ function App() {
       children: [
         {
           index: true,
-          element: <Home />
+          element: <Home />,
         },
         {
           path: "/projects/:type/:path",
-          element: <SingleProject />
-        }
-      ]
-    }
+          element: (
+            <Suspense fallback={<LoadingSpinner />}>
+              <SingleProject />
+            </Suspense>
+          ),
+        },
+      ],
+    },
   ]);
 
   return (

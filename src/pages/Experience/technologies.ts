@@ -1,4 +1,28 @@
-import { vueIcon, photoshopIcon, premiere_proIcon, cssIcon, dockerIcon, figmaIcon, githubIcon, godotIcon, googlecloudIcon, htmlIcon, jiraIcon, jsIcon, mongoIcon, nodejsIcon, postmanIcon, reactIcon, reactqueryIcon, sassIcon, typescriptIcon, unrealengineIcon, tailwindIcon, prismaIcon, nextjsIcon } from "../../assets";
+import {
+  vueIcon,
+  photoshopIcon,
+  premiere_proIcon,
+  cssIcon,
+  dockerIcon,
+  figmaIcon,
+  githubIcon,
+  godotIcon,
+  googlecloudIcon,
+  htmlIcon,
+  jiraIcon,
+  jsIcon,
+  mongoIcon,
+  nodejsIcon,
+  postmanIcon,
+  reactIcon,
+  reactqueryIcon,
+  sassIcon,
+  typescriptIcon,
+  unrealengineIcon,
+  tailwindIcon,
+  prismaIcon,
+  nextjsIcon,
+} from "../../assets";
 
 export const technologies = [
   {
@@ -7,6 +31,11 @@ export const technologies = [
       {
         img: reactIcon,
         title: "React JS",
+        labels: [],
+      },
+      {
+        img: nextjsIcon,
+        title: "Next JS",
         labels: [],
       },
       {
@@ -39,15 +68,11 @@ export const technologies = [
         title: "CSS",
         labels: [],
       },
-      {
-        img: nextjsIcon,
-        title: "Next JS",
-        labels: [],
-      },
+
       {
         img: tailwindIcon,
         title: "Tailwind",
-        labels: [],
+        labels: ["exploring"],
       },
       {
         img: vueIcon,

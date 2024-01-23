@@ -1,25 +1,27 @@
 @use "../../scss/index" as *;
 
 $cardWith: 325px;
-$cardHeight: 325px;
+$cardHeight: 300px;
+$cardMediaHeight: 175px;
+$borderRadiusCard: 10px;
 
 .projectCard {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  color: $clr-default;
   background-color: $bg-primary;
   width: $cardWith;
   height: $cardHeight;
-  border-radius: 10px;
-  transition: background-color 0.2s ease;
-  color: whitesmoke;
+  border-radius: $borderRadiusCard;
   text-decoration: none;
-  padding-bottom: 1rem;
   position: relative;
+  padding-bottom: 1rem;
+  // padding: 1rem;
 
   &:hover {
     background-color: $bg-nav;
@@ -30,10 +32,10 @@ $cardHeight: 325px;
   }
 
   &__title {
-    font-size: 25px;
-    margin-top: 1rem;
+    font-size: 23px;
     text-decoration: none;
     color: $clr-default;
+    font-style: italic;
 
     @media (max-width: $smq) {
       text-decoration: underline;
@@ -44,52 +46,12 @@ $cardHeight: 325px;
     width: 100%;
   }
 
-  &__description {
-    color: $clr-disabled;
-    padding: 0.5rem 1rem;
-    overflow: hidden;
-  }
-
   & iframe {
+    width: $cardWith;
+    height: $cardMediaHeight;
     border: none;
-  }
-
-  &__btn-container {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    padding: 1rem;
-  }
-
-  &__btn {
-    text-decoration: none;
-    font-size: 16px;
-    color: $clr-primary;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.075rem;
-    border-bottom: 2px solid transparent;
-
-    &:hover {
-      color: $clr-secondary;
-      border-bottom: 2px solid $clr-secondary;
-    }
-  }
-
-  &__btn-disabled {
-    color: $clr-disabled;
-    pointer-events: none;
-    cursor: default;
-  }
-
-  &__description-btn {
-    border: none;
-    background: none;
-    outline: none;
-    color: $clr-default;
-    cursor: pointer;
-    margin-left: 0.25rem;
+    border-top-left-radius: $borderRadiusCard;
+    border-top-right-radius: $borderRadiusCard;
   }
 
   &__usedTechImgs {
@@ -105,26 +67,25 @@ $cardHeight: 325px;
   }
 
   &__thumbnail {
-    height: 175px;
-  }
-
-  &__notAvailableForPublic {
-    color: $clr-error;
+    object-fit: cover;
+    opacity: 0.9;
+    border-top-left-radius: $borderRadiusCard;
+    border-top-right-radius: $borderRadiusCard;
   }
 
   &__hoverButtons {
     position: absolute;
     @include flex-center(column);
     gap: 1.5rem;
-    z-index: 5;
+    z-index: 100;
     top: 0;
     left: 0;
     width: $cardWith;
     height: $cardHeight;
-    background-color: rgba($color: $bg-nav, $alpha: 0.95);
+    background-color: rgba($color: $bg-nav, $alpha: 0.975);
     animation-name: opacityAnimation;
     animation-duration: 0.2s;
-    border-radius: 10px;    
+    border-radius: $borderRadiusCard;
   }
 }
 
