@@ -22,17 +22,14 @@ const SingleProject = () => {
   const [showFullProjectDescription, setShowFullProjectDescription] = useState(false);
   const { windowSize } = useScreenSize();
 
-  const WIDTH_TO_DISPLAY_BUTTON_SHOW_MORE = 1280
+  const WIDTH_TO_DISPLAY_BUTTON_SHOW_MORE = 1280;
   const NUMBER_OF_CHARACTERS_TO_DISPLAY_BUTTON_SHOW_MORE = 380;
 
   useEffect(() => {
     dispatch({ type: ACTION_TYPES.SAVE_PREVIOUS_PAGE, payload: "/projects" });
     scrollTo({ top: 0, left: 0, behavior: "smooth" });
     setProjectIndex(() => projectTypeArr.findIndex((item) => item.path === path));
-    if (windowSize.width < WIDTH_TO_DISPLAY_BUTTON_SHOW_MORE) {
-      setShowFullProjectDescription(false);
-    }
-  }, [path, projectTypeArr, dispatch, windowSize]);
+  }, [path, projectTypeArr, dispatch]);
 
   useEffect(() => {
     setProject(projectTypeArr[projectIndex]);
@@ -59,6 +56,12 @@ const SingleProject = () => {
       scrollTo({ top: 0, left: 0, behavior: "smooth" });
     }
   }, [showFullProjectDescription]);
+
+  useEffect(() => {
+    if (windowSize.width < WIDTH_TO_DISPLAY_BUTTON_SHOW_MORE) {
+      setShowFullProjectDescription(false);
+    }
+  }, [path, windowSize]);
 
   return (
     <section className="project">
