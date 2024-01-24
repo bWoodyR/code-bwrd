@@ -10,10 +10,10 @@ type ProjectCardsProps = {
 
 const ProjectCard = ({ data, type }: ProjectCardsProps) => {
   const [showHoverButtons, setShowHoverButtons] = useState(false);
-  const { title, usedTechImgs, img, video, liveSiteURL, path, availableForPublic } = data;
+  const { title, usedTechImgs, img, video, liveSiteURL, path, availableForPublic, inDevelopment } = data;
 
   return (
-    <div className="projectCard" onMouseOver={() => setShowHoverButtons(true)} onMouseLeave={() => setShowHoverButtons(false)}>
+    <div className="projectCard" onMouseOver={() => setShowHoverButtons(true)} onMouseLeave={() => setShowHoverButtons(false)} data-type={inDevelopment ? "indevelopment" : null}>
       {img.length > 0 && !video && <img src={img[0]} alt={`${title}-project-image`} className="projectCard__thumbnail"></img>}
       {video && <iframe src={video} title="YouTube video player" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"></iframe>}
       {showHoverButtons && !video && <ProjectCardHoverButtons path={path} liveSiteURL={liveSiteURL} type={type} availableForPublic={availableForPublic} />}

@@ -12,6 +12,7 @@ export type TProjectData = {
   liveSiteURL: string;
   demoSiteURL: string;
   availableForPublic: boolean;
+  inDevelopment: boolean
 };
 
 

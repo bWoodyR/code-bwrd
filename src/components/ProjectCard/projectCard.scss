@@ -1,7 +1,7 @@
 @use "../../scss/index" as *;
 
 $cardWith: 325px;
-$cardHeight: 300px;
+$cardHeight: 310px;
 $cardMediaHeight: 175px;
 $borderRadiusCard: 10px;
 
@@ -23,6 +23,23 @@ $borderRadiusCard: 10px;
   position: relative;
   padding-bottom: 1rem;
   // padding: 1rem;
+  overflow: hidden;
+
+  &[data-type="indevelopment"]::after {
+    content: "IN DEVELOPMENT";
+    position: absolute;
+    background-color: $clr-primary;
+    color: $clr-black;
+    width: 150px;
+    height: 20px;
+    top: 2.25rem;
+    right: -1.75rem;
+    font-size: 14px;
+    font-weight: bold;
+    @include flex-center();
+    transform: rotate(45deg);
+  }
+
 
   &:hover {
     background-color: $bg-nav;

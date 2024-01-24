@@ -30,6 +30,7 @@ export const projects = [
         liveSiteURL: "https://gpt.bwrd.eu",
         demoSiteURL: "",
         availableForPublic: true,
+        inDevelopment: false
       },
       {
         title: "Finance Literacy Game",
@@ -42,6 +43,7 @@ export const projects = [
         liveSiteURL: "https://fmk.bwrd.eu",
         demoSiteURL: "",
         availableForPublic: true,
+        inDevelopment: true
       },
       {
         title: "QR & Quiz App",
@@ -54,6 +56,7 @@ export const projects = [
         liveSiteURL: "https://kvizovahra.sk/",
         demoSiteURL: "",
         availableForPublic: true,
+        inDevelopment: false
       },
       {
         title: "Random Generators",
@@ -66,6 +69,7 @@ export const projects = [
         liveSiteURL: "https://bwrd.eu/#/tipsport",
         demoSiteURL: "",
         availableForPublic: true,
+        inDevelopment: false
       },
       {
         title: "Linker App",
@@ -78,6 +82,7 @@ export const projects = [
         liveSiteURL: "",
         demoSiteURL: "",
         availableForPublic: false,
+        inDevelopment: false
       },
     ],
   },
@@ -95,6 +100,7 @@ export const projects = [
         liveSiteURL: "",
         demoSiteURL: "https://roman-bwoody-durek.itch.io/5-nights-to-live",
         availableForPublic: true,
+        inDevelopment: false
       },
       {
         title: "Crystal Hunter",
@@ -107,6 +113,7 @@ export const projects = [
         liveSiteURL: "",
         demoSiteURL: "https://roman-bwoody-durek.itch.io/crystal-hunter",
         availableForPublic: true,
+        inDevelopment: false
       },
       {
         title: "Pirate Dodge",
@@ -119,6 +126,7 @@ export const projects = [
         liveSiteURL: "",
         demoSiteURL: "",
         availableForPublic: true,
+        inDevelopment: false
       },
     ],
   },
