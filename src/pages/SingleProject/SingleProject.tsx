@@ -29,7 +29,11 @@ const SingleProject = () => {
     dispatch({ type: ACTION_TYPES.SAVE_PREVIOUS_PAGE, payload: "/projects" });
     scrollTo({ top: 0, left: 0, behavior: "smooth" });
     setProjectIndex(() => projectTypeArr.findIndex((item) => item.path === path));
-    setShowFullProjectDescription(false);
+
+    if (windowSize.width < 1280) {
+      setShowFullProjectDescription(false);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [path, projectTypeArr, dispatch]);
 
   useEffect(() => {
