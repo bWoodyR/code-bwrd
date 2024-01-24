@@ -69,6 +69,7 @@ const SingleProject = () => {
       <div className="project__data">
         <div className="project__data__left">
           <h1 className="project__data__title">{project?.title}</h1>
+          {project.inDevelopment && <span className="project__data__label">IN DEVELOPMENT</span>}
           <p className="project__data__description">
             {showFullProjectDescription ? project.description : `${project?.description.substring(0, NUMBER_OF_CHARACTERS_TO_DISPLAY_BUTTON_SHOW_MORE)}${project.description.length > NUMBER_OF_CHARACTERS_TO_DISPLAY_BUTTON_SHOW_MORE ? "..." : ""}`}
             {project.description.length > NUMBER_OF_CHARACTERS_TO_DISPLAY_BUTTON_SHOW_MORE && windowSize.width < WIDTH_TO_DISPLAY_BUTTON_SHOW_MORE && (

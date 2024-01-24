@@ -105,17 +105,17 @@ $widthOfProject: 80%;
     }
 
     &__label {
-      border-radius: 20px;
-      background-color: $clr-default;
+      width: fit-content;
+      background: linear-gradient(to right, $bg-primary, $clr-primary, $bg-primary);
+      padding: 0.25rem 2rem;
       color: $clr-black;
-      width: 75px;
-      text-align: center;
+      font-weight: bold;
     }
 
     &__description {
       font-size: 18px;
       letter-spacing: 0.075rem;
-      padding: 1rem 0;
+      padding: 0.5rem 0;
       white-space: pre-wrap;
       line-height: 1.75;
 
@@ -125,8 +125,8 @@ $widthOfProject: 80%;
         outline: none;
         font-size: 18px;
         color: $clr-secondary;
-        margin-left: .5rem;
-        transition: all .2s ease;
+        margin-left: 0.5rem;
+        transition: all 0.2s ease;
 
         &:hover {
           cursor: pointer;
