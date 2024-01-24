@@ -22,12 +22,17 @@ const SingleProject = () => {
   const [showFullProjectDescription, setShowFullProjectDescription] = useState(false);
   const { windowSize } = useScreenSize();
 
+  const WIDTH_TO_DISPLAY_BUTTON_SHOW_MORE = 1280
+  const NUMBER_OF_CHARACTERS_TO_DISPLAY_BUTTON_SHOW_MORE = 380;
+
   useEffect(() => {
     dispatch({ type: ACTION_TYPES.SAVE_PREVIOUS_PAGE, payload: "/projects" });
     scrollTo({ top: 0, left: 0, behavior: "smooth" });
     setProjectIndex(() => projectTypeArr.findIndex((item) => item.path === path));
-    setShowFullProjectDescription(false);
-  }, [path, projectTypeArr, dispatch]);
+    if (windowSize.width < WIDTH_TO_DISPLAY_BUTTON_SHOW_MORE) {
+      setShowFullProjectDescription(false);
+    }
+  }, [path, projectTypeArr, dispatch, windowSize]);
 
   useEffect(() => {
     setProject(projectTypeArr[projectIndex]);
@@ -44,7 +49,7 @@ const SingleProject = () => {
   }, [projectIndex, projectTypeArr]);
 
   useEffect(() => {
-    if (windowSize.width < 1280) {
+    if (windowSize.width < WIDTH_TO_DISPLAY_BUTTON_SHOW_MORE) {
       setShowFullProjectDescription(false);
     } else setShowFullProjectDescription(true);
   }, [windowSize.width]);
@@ -73,8 +78,8 @@ const SingleProject = () => {
         <div className="project__data__left">
           <h1 className="project__data__title">{project?.title}</h1>
           <p className="project__data__description">
-            {showFullProjectDescription ? project.description : `${project?.description.substring(0, 380)}${project.description.length > 380 ? "..." : ""}`}
-            {project.description.length > 380 && windowSize.width < 1280 && (
+            {showFullProjectDescription ? project.description : `${project?.description.substring(0, NUMBER_OF_CHARACTERS_TO_DISPLAY_BUTTON_SHOW_MORE)}${project.description.length > NUMBER_OF_CHARACTERS_TO_DISPLAY_BUTTON_SHOW_MORE ? "..." : ""}`}
+            {project.description.length > NUMBER_OF_CHARACTERS_TO_DISPLAY_BUTTON_SHOW_MORE && windowSize.width < WIDTH_TO_DISPLAY_BUTTON_SHOW_MORE && (
               <button className="project__data__description__btn-show-hide" onClick={() => setShowFullProjectDescription(!showFullProjectDescription)}>
                 {showFullProjectDescription ? "Hide" : "Show More"}
               </button>
