@@ -51,18 +51,6 @@ const SingleProject = () => {
     } else setShowFullProjectDescription(true);
   }, [windowSize.width]);
 
-  useEffect(() => {
-    if (!showFullProjectDescription) {
-      scrollTo({ top: 0, left: 0, behavior: "smooth" });
-    }
-  }, [showFullProjectDescription]);
-
-  useEffect(() => {
-    if (windowSize.width < WIDTH_TO_DISPLAY_BUTTON_SHOW_MORE) {
-      setShowFullProjectDescription(false);
-    }
-  }, [path, windowSize]);
-
   return (
     <section className="project">
       <div className="project__btn-container">
@@ -83,7 +71,15 @@ const SingleProject = () => {
           <p className="project__data__description">
             {showFullProjectDescription ? project.description : `${project?.description.substring(0, NUMBER_OF_CHARACTERS_TO_DISPLAY_BUTTON_SHOW_MORE)}${project.description.length > NUMBER_OF_CHARACTERS_TO_DISPLAY_BUTTON_SHOW_MORE ? "..." : ""}`}
             {project.description.length > NUMBER_OF_CHARACTERS_TO_DISPLAY_BUTTON_SHOW_MORE && windowSize.width < WIDTH_TO_DISPLAY_BUTTON_SHOW_MORE && (
-              <button className="project__data__description__btn-show-hide" onClick={() => setShowFullProjectDescription(!showFullProjectDescription)}>
+              <button
+                className="project__data__description__btn-show-hide"
+                onClick={() => {
+                  if (showFullProjectDescription) {
+                    scrollTo({ top: 0, left: 0, behavior: "smooth" });
+                  }
+                  setShowFullProjectDescription(!showFullProjectDescription);
+                }}
+              >
                 {showFullProjectDescription ? "Hide" : "Show More"}
               </button>
             )}
