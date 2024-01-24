@@ -7,7 +7,6 @@
   min-height: 100svh;
   background-color: #2f2f2f;
 
-
   &__header {
     @include sectionHeader();
 
@@ -18,20 +17,30 @@
 
   &__items {
     @include flex-center(column);
+    justify-content: flex-start;
+    align-items: flex-start;
     gap: 1rem;
 
-
     &__section {
-      width: 100%;
-
+      width: 95vw;
+      padding-left: 1rem;
+      @media (max-width: $lgmq) {
+        padding-left: 2.5rem;
+      }
+      @media (max-width: $smq) {
+        padding-left: 0;
+      }
     }
 
     &__cards {
-      @include flex-center(row);
-      flex-wrap: wrap;  
-      align-items: flex-start;
+      // @include flex-center(row);
+      display: flex;
+      flex-wrap: nowrap;
+      
       padding: 1rem 0;
       gap: 1.25rem;
+      overflow-x: auto;
+      @include custom-scrollbar();
     }
   }
 }
