@@ -30,12 +30,12 @@ export const projects = [
         liveSiteURL: "https://gpt.bwrd.eu",
         demoSiteURL: "",
         availableForPublic: true,
-        inDevelopment: false
+        inDevelopment: false,
       },
       {
         title: "Finance Literacy Game",
         path: "finance-literacy",
-        usedTechImgs: getUsedTech("web", ["React JS", "Typescript", "React Query", "SASS", "Mongo DB", "Docker", "Google Cloud"]),
+        usedTechImgs: getUsedTech("web", ["React JS", "Typescript", "React Query", "SASS", "Node JS", "Mongo DB", "Docker", "Google Cloud"]),
         description:
           "The game is meticulously designed to provide players with an interactive and immersive experience centered around effectively managing their finances. Through a series of engaging life-based scenarios, players are presented with a variety of financial challenges, each aimed at honing their decision-making skills in the realm of personal finance. This approach not only adds a dynamic and practical dimension to the gaming experience but also serves as a valuable educational tool, empowering players to make informed and strategic financial choices.\n\nIn addition to the thought-provoking scenarios, the game goes the extra mile by offering detailed charts and data visualizations. These visual aids serve as powerful tools, delivering a comprehensive overview of players' financial progress within the game. By presenting information in a visually accessible manner, the game fosters a deeper understanding of financial dynamics and allows players to track their advancements and setbacks with clarity. This feature contributes to the overall richness of the gaming experience, providing players with valuable insights into their virtual financial journeys.",
         img: [financeLiteracyImg, financeLiteracyImg2, financeLiteracyImg3, financeLiteracyImg4, financeLiteracyImg5],
@@ -43,7 +43,7 @@ export const projects = [
         liveSiteURL: "https://fmk.bwrd.eu",
         demoSiteURL: "",
         availableForPublic: true,
-        inDevelopment: true
+        inDevelopment: true,
       },
       {
         title: "QR & Quiz App",
@@ -56,7 +56,7 @@ export const projects = [
         liveSiteURL: "https://kvizovahra.sk/",
         demoSiteURL: "",
         availableForPublic: true,
-        inDevelopment: false
+        inDevelopment: false,
       },
       {
         title: "Random Generators",
@@ -69,7 +69,7 @@ export const projects = [
         liveSiteURL: "https://bwrd.eu/#/tipsport",
         demoSiteURL: "",
         availableForPublic: true,
-        inDevelopment: false
+        inDevelopment: false,
       },
       {
         title: "Linker App",
@@ -82,7 +82,7 @@ export const projects = [
         liveSiteURL: "",
         demoSiteURL: "",
         availableForPublic: false,
-        inDevelopment: false
+        inDevelopment: false,
       },
     ],
   },
@@ -100,7 +100,7 @@ export const projects = [
         liveSiteURL: "",
         demoSiteURL: "https://roman-bwoody-durek.itch.io/5-nights-to-live",
         availableForPublic: true,
-        inDevelopment: false
+        inDevelopment: false,
       },
       {
         title: "Crystal Hunter",
@@ -113,7 +113,7 @@ export const projects = [
         liveSiteURL: "",
         demoSiteURL: "https://roman-bwoody-durek.itch.io/crystal-hunter",
         availableForPublic: true,
-        inDevelopment: false
+        inDevelopment: false,
       },
       {
         title: "Pirate Dodge",
@@ -126,7 +126,7 @@ export const projects = [
         liveSiteURL: "",
         demoSiteURL: "",
         availableForPublic: true,
-        inDevelopment: false
+        inDevelopment: false,
       },
     ],
   },
