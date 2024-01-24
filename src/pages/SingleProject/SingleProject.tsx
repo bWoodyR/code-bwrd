@@ -29,6 +29,7 @@ const SingleProject = () => {
     dispatch({ type: ACTION_TYPES.SAVE_PREVIOUS_PAGE, payload: "/projects" });
     scrollTo({ top: 0, left: 0, behavior: "smooth" });
     setProjectIndex(() => projectTypeArr.findIndex((item) => item.path === path));
+    setShowFullProjectDescription(false);
   }, [path, projectTypeArr, dispatch]);
 
   useEffect(() => {
