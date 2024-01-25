@@ -1,0 +1,30 @@
+@use "../../../scss/index" as *;
+
+.projectCardImage {
+  &__title {
+    font-size: 23px;
+    text-decoration: none;
+    color: $clr-default;
+    font-style: italic;
+
+    @media (max-width: $smq) {
+      text-decoration: underline;
+    }
+  }
+
+  &__video {
+    width: $projectCardWidth;
+    height: $projectCardMediaHeight;
+    border: none;
+    outline: none;
+    border-top-left-radius: $projectCardBorderRadius;
+    border-top-right-radius: $projectCardBorderRadius;
+  }
+
+  &__thumbnail {
+    object-fit: cover;
+    opacity: 0.9;
+    border-top-left-radius: $projectCardBorderRadius;
+    border-top-right-radius: $projectCardBorderRadius;
+  }
+}
