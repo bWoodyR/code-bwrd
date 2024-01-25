@@ -2,12 +2,7 @@ import { useContext, useEffect, useRef } from "react";
 import { AppContext } from "../services/Context/AppContext";
 import { ACTION_TYPES } from "../services/Context/appReducer";
 
-type Props = {
-  selectedSection: string;
-  setSelectedSection: React.Dispatch<React.SetStateAction<string>>;
-};
-
-export const useScrollToSection = ({ selectedSection, setSelectedSection }: Props) => {
+export const useScrollToSection = () => {
   const { state, dispatch } = useContext(AppContext);
   const introRef = useRef<HTMLElement>(null);
   const aboutRef = useRef<HTMLElement>(null);
@@ -19,16 +14,16 @@ export const useScrollToSection = ({ selectedSection, setSelectedSection }: Prop
     const scrollToRef = (ref: React.RefObject<HTMLElement>) => {
       if (ref.current) {
         ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
-        setSelectedSection("");
+        dispatch({ type: ACTION_TYPES.SET_SELECTED_SECTION, payload: "" });
       }
     };
 
     if (state.previousPage === "/projects") {
       scrollToRef(projectsRef);
-      setSelectedSection("projects");
+      dispatch({ type: ACTION_TYPES.SET_SELECTED_SECTION, payload: "projects" });
       dispatch({ type: ACTION_TYPES.SAVE_PREVIOUS_PAGE, payload: "" });
     } else {
-      switch (selectedSection) {
+      switch (state.selectedSection) {
         case "intro":
           scrollToRef(introRef);
           break;
@@ -46,7 +41,7 @@ export const useScrollToSection = ({ selectedSection, setSelectedSection }: Prop
           break;
       }
     }
-  }, [selectedSection, setSelectedSection, dispatch, state.previousPage]);
+  }, [state.selectedSection, dispatch, state.previousPage]);
 
   return { introRef, aboutRef, experienceRef, projectsRef, contactRef };
 };

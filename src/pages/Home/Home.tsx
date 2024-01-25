@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Intro, About, Experience, Projects, Contact, Socials } from "..";
 import "./home.scss";
 import Navigation from "../../components/Navigation/Navigation";
@@ -8,14 +7,13 @@ import { useBrowserCheck } from "../../hooks/useBrowserCheck";
 import { useScrollToSection } from "../../hooks/useScrollToSection";
 
 const Home = () => {
-  const [selectedSection, setSelectedSection] = useState("");
-  const { introRef, aboutRef, experienceRef, projectsRef, contactRef } = useScrollToSection({ selectedSection, setSelectedSection });
+  const { introRef, aboutRef, experienceRef, projectsRef, contactRef } = useScrollToSection();
   useBrowserCheck();
 
   return (
     <>
-      <Navigation setSelectedSection={setSelectedSection} />
-      <Intro setSelectedSection={setSelectedSection} introRef={introRef} />
+      <Navigation />
+      <Intro introRef={introRef} />
       <About aboutRef={aboutRef} />
       <Experience experienceRef={experienceRef} />
       <Projects projectsRef={projectsRef} />

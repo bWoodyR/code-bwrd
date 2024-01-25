@@ -9,6 +9,7 @@ type AppContextType = {
 
 const initState = {
   previousPage: "",
+  selectedSection: ""
 };
 
 const AppContext = React.createContext<AppContextType>({
