@@ -1,0 +1,16 @@
+@use "../../../scss/index" as *;
+
+.singleProjectLiveSiteButton {
+  &__btn-live-site {
+    align-self: flex-start;
+  }
+
+  &__notAvailableForPublic {
+    font-size: 18px;
+    letter-spacing: 0.075rem;
+    padding: 0.5rem 0;
+    white-space: pre-wrap;
+    line-height: 1.75;
+    color: $clr-error;
+  }
+}

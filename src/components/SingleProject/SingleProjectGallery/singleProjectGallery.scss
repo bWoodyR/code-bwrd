@@ -1,0 +1,41 @@
+@use "../../../scss/index" as *;
+
+.singleProjectGallery {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  &__title {
+    font-size: 40px;
+    display: none;
+
+    @media (max-width: $lgmq) {
+      display: block;
+    }
+  }
+
+  &__image-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @media (max-width: $lgmq) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  &__image {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    @media (max-width: $lgmq) {
+      max-width: 450px;
+      max-height: 250px;
+    }
+
+    @media (max-width: $smq) {
+      width: 100%;
+    }
+  }
+}

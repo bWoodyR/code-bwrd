@@ -1,7 +1,5 @@
 @use "../../scss/index" as *;
 
-$widthOfProject: 80%;
-
 .project {
   padding: 1rem;
   display: flex;
@@ -10,37 +8,12 @@ $widthOfProject: 80%;
   flex-direction: column;
   gap: 1rem;
 
-  &__btn-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: $widthOfProject;
-    color: red;
-
-    @media (max-width: $smq) {
-      width: 100%;
-    }
-  }
-
-  &__btn-back {
-    display: flex;
-    gap: 0.5rem;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__btn-live-site {
-    align-self: flex-start;
-  }
-
-  &__data {
+  &__wrapper {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
-    width: $widthOfProject;
+    width: 80%;
     margin-top: 1rem;
 
     @media (max-width: $lgmq) {
@@ -49,108 +22,12 @@ $widthOfProject: 80%;
     @media (max-width: $smq) {
       width: 100%;
     }
-
-    &__left {
-      flex: 1.5;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    &__right {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 1.5rem;
-
-      &__title {
-        font-size: 40px;
-        display: none;
-
-        @media (max-width: $lgmq) {
-          display: block;
-        }
-      }
-
-      &__image-container {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-
-        @media (max-width: $lgmq) {
-          flex-direction: row;
-          flex-wrap: wrap;
-        }
-      }
-      &__image {
-        border-radius: 10px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-
-        @media (max-width: $lgmq) {
-          max-width: 450px;
-          max-height: 250px;
-        }
-
-        @media (max-width: $smq) {
-          width: 100%;
-        }
-      }
-    }
-
-    &__title {
-      font-size: 60px;
-      color: $clr-primary;
-      line-height: 1;
-      font-style: italic;
-    }
-
-    &__label {
-      width: fit-content;
-      background: linear-gradient(to right, $bg-primary, $clr-primary, $bg-primary);
-      padding: 0.25rem 2rem;
-      color: $clr-black;
-      font-weight: bold;
-    }
-
-    &__description {
-      font-size: 18px;
-      letter-spacing: 0.075rem;
-      padding: 0.5rem 0;
-      white-space: pre-wrap;
-      line-height: 1.75;
-
-      &__btn-show-hide {
-        background: none;
-        border: none;
-        outline: none;
-        font-size: 18px;
-        color: $clr-secondary;
-        margin-left: 0.5rem;
-        transition: all 0.2s ease;
-
-        &:hover {
-          cursor: pointer;
-          scale: 1.1;
-        }
-      }
-    }
-
-    &__notAvailableForPublic {
-      color: $clr-error;
-    }
   }
 
-  &__usedTechImgs {
-    &__title {
-      font-size: 40px;
-    }
-    &__items {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    &__item {
-      @include techCard();
-    }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1.5;
   }
 }

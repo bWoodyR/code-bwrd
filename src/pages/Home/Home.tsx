@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Intro, About, Experience, Projects, Contact, Socials } from "../../components";
+import { Intro, About, Experience, Projects, Contact, Socials } from "..";
 import "./home.scss";
 import Navigation from "../../components/Navigation/Navigation";
 import { ToastContainer } from "react-toastify";

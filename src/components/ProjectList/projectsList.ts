@@ -1,4 +1,5 @@
 import { financeLiteracyImg, financeLiteracyImg2, financeLiteracyImg3, financeLiteracyImg4, financeLiteracyImg5, generatorsImg, generatorsImg2, gptImg, gptImg2, gptImg3, linkerImg, quizImg, quizImg2, quizImg3 } from "../../assets/thumbnails";
+import { TProjectDataExtended } from "../../types/ProjectTypes";
 import { technologies } from "../ExperienceTechnologiesList/technologies";
 
 const getUsedTech = (type: string, techs: string[]) => {
@@ -16,7 +17,7 @@ const getUsedTech = (type: string, techs: string[]) => {
   return usedTech as { img: string; title: string; labels: string[] }[];
 };
 
-export const projects = [
+export const projects: TProjectDataExtended[] = [
   {
     type: "web",
     projects: [

@@ -1,0 +1,15 @@
+@use "../../../scss/index" as *;
+
+.singleProjectUsedTechImages {
+    &__title {
+      font-size: 40px;
+    }
+    &__items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    &__item {
+      @include techCard();
+    }
+  }
