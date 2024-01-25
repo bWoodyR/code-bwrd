@@ -1,0 +1,18 @@
+@use "../../scss/index" as *;
+
+.experienceList {
+  @include flex-center(column);
+  gap: 2rem;
+
+  &__technology {
+    @include flex-center(column);
+    gap: 1rem;
+    width: 100%; 
+
+    &__items {
+      @include flex-center(row);
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+  }
+}

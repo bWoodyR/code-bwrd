@@ -1,0 +1,25 @@
+@use "../../../scss//index" as *;
+
+.projectCardHoverButtons {
+  position: absolute;
+  @include flex-center(column);
+  gap: 1.5rem;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: $projectCardWidth;
+  height: $projectCardHeight;
+  background-color: rgba($color: $bg-nav, $alpha: 0.975);
+  animation-name: opacityAnimation;
+  animation-duration: 0.2s;
+  border-radius: $projectCardBorderRadius;
+}
+
+@keyframes opacityAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

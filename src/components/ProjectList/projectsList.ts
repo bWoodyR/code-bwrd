@@ -1,5 +1,5 @@
 import { financeLiteracyImg, financeLiteracyImg2, financeLiteracyImg3, financeLiteracyImg4, financeLiteracyImg5, generatorsImg, generatorsImg2, gptImg, gptImg2, gptImg3, linkerImg, quizImg, quizImg2, quizImg3 } from "../../assets/thumbnails";
-import { technologies } from "../../pages/Experience/technologies";
+import { technologies } from "../ExperienceTechnologiesList/technologies";
 
 const getUsedTech = (type: string, techs: string[]) => {
   const frontendTechnologies = technologies[0].technologies;

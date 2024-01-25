@@ -17,6 +17,11 @@ $smq: 700px;
 $mmq: 900px;
 $lgmq: 1280px;
 
+$projectCardWidth: 325px;
+$projectCardHeight: 310px;
+$projectCardMediaHeight: 175px;
+$projectCardBorderRadius: 10px;
+
 @mixin flex-center($direction: column) {
   display: flex;
   flex-direction: $direction;
@@ -32,11 +37,15 @@ $lgmq: 1280px;
   gap: 0.5rem;
   padding: 2rem 0;
   text-align: center;
-}
 
-@mixin sectionTitle {
-  font-size: 45px;
-  border-bottom: 3px solid orange;
+  &__title {
+    font-size: 45px;
+    border-bottom: 3px solid orange;
+  }
+
+  &__infoText {
+      color: $clr-disabled;
+    }
 }
 
 @mixin custom-scrollbar {
@@ -102,7 +111,7 @@ $lgmq: 1280px;
 }
 
 @mixin btn-primary {
- color: $clr-default;
+  color: $clr-default;
   background-color: none;
   border: none;
   outline: 1px solid $clr-default;

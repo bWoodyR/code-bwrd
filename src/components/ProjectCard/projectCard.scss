@@ -1,9 +1,6 @@
 @use "../../scss/index" as *;
 
-$cardWith: 325px;
-$cardHeight: 310px;
-$cardMediaHeight: 175px;
-$borderRadiusCard: 10px;
+
 
 .projectCard {
   display: flex;
@@ -15,15 +12,15 @@ $borderRadiusCard: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   color: $clr-default;
   background-color: $bg-primary;
-  min-width: $cardWith;
-  max-width: $cardWith;
-  height: $cardHeight;
-  border-radius: $borderRadiusCard;
+  min-width: $projectCardWidth;
+  max-width: $projectCardWidth;
+  height: $projectCardHeight;
+  border-radius: $projectCardBorderRadius;
   text-decoration: none;
   position: relative;
   padding-bottom: 1rem;
-  // padding: 1rem;
   overflow: hidden;
+  z-index: 2;
 
   &[data-type="indevelopment"]::after {
     content: "IN DEVELOPMENT";
@@ -39,7 +36,6 @@ $borderRadiusCard: 10px;
     @include flex-center();
     transform: rotate(45deg);
   }
-
 
   &:hover {
     background-color: $bg-nav;
@@ -60,58 +56,18 @@ $borderRadiusCard: 10px;
     }
   }
 
-  & hr {
-    width: 100%;
-  }
-
   & iframe {
-    width: $cardWith;
-    height: $cardMediaHeight;
+    width: $projectCardWidth;
+    height: $projectCardMediaHeight;
     border: none;
-    border-top-left-radius: $borderRadiusCard;
-    border-top-right-radius: $borderRadiusCard;
+    border-top-left-radius: $projectCardBorderRadius;
+    border-top-right-radius: $projectCardBorderRadius;
   }
 
-  &__usedTechImgs {
-    @include flex-center(row);
-    gap: 0.5rem;
-
-    &__img {
-      width: 22px;
-      height: 22px;
-      min-width: 22px;
-      min-height: 22px;
-    }
-  }
-
-  &__thumbnail {
+    &__thumbnail {
     object-fit: cover;
     opacity: 0.9;
-    border-top-left-radius: $borderRadiusCard;
-    border-top-right-radius: $borderRadiusCard;
-  }
-
-  &__hoverButtons {
-    position: absolute;
-    @include flex-center(column);
-    gap: 1.5rem;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    width: $cardWith;
-    height: $cardHeight;
-    background-color: rgba($color: $bg-nav, $alpha: 0.975);
-    animation-name: opacityAnimation;
-    animation-duration: 0.2s;
-    border-radius: $borderRadiusCard;
-  }
-}
-
-@keyframes opacityAnimation {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
+    border-top-left-radius: $projectCardBorderRadius;
+    border-top-right-radius: $projectCardBorderRadius;
   }
 }

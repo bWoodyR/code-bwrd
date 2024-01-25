@@ -1,0 +1,26 @@
+@use "../../scss/index" as *;
+
+.aboutMeCodeSnippet {
+  font-size: 25px;
+  width: 50%;
+  background-color: $bg-code;
+  padding: 1rem;
+  border-radius: 10px;
+  font-family: "Fira Code", monospace;
+
+  @media (max-width: $mmq) {
+    width: 100%;
+  }
+
+  &__component {
+    color: goldenrod;
+  }
+
+  &__prop {
+    color: orange;
+  }
+
+  &__value {
+    color: yellowgreen;
+  }
+}

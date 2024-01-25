@@ -1,12 +1,13 @@
 import "./intro.scss";
 
-type Props = {
+type IntroProps = {
   setSelectedSection: React.Dispatch<React.SetStateAction<string>>;
+  introRef: React.RefObject<HTMLElement>;
 };
 
-const Intro = ({ setSelectedSection }: Props) => {
+const Intro = ({ setSelectedSection, introRef }: IntroProps) => {
   return (
-    <div className="intro">
+    <section className="intro" ref={introRef}>
       <div className="intro__info">
         <div>
           <p>Hi, my name is</p>
@@ -21,7 +22,7 @@ const Intro = ({ setSelectedSection }: Props) => {
           Check my work
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -2,8 +2,13 @@ import "./contact.scss";
 import { useState } from "react";
 import { useSendEmail } from "../../hooks/useSendEmail";
 import LoadingSpinner from "../../components/LoadingSpinner/LoadingSpinner";
+import SectionHeader from "../../components/SectionHeader/SectionHeader";
 
-const Contact = () => {
+type ContactProps = {
+  contactRef: React.RefObject<HTMLElement>;
+};
+
+const Contact = ({ contactRef }: ContactProps) => {
   const { mutate, isPending } = useSendEmail();
   const [messageData, setMessageData] = useState({
     name: "",
@@ -29,11 +34,8 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact">
-      <div className="contact__header">
-        <h1 className="contact__header__title">Contact Me</h1>
-        <p className="contact__header__infoText">// Got a question or problem to solve? Hit me up.</p>
-      </div>
+    <section className="contact" ref={contactRef}>
+      <SectionHeader sectionName="Contact Me" sectionInfoText="// Got a question or problem to solve? Hit me up." />      
       {showError && <p className="contact__error">Error! Message was not send. Check if you fill all the fields.</p>}
       <form onSubmit={(e) => handleSubmit(e)} className="contact__form">
         <input disabled={isPending} name="name" type="text" placeholder="Your name" maxLength={30} value={messageData.name} onChange={(e) => handleFormChange(e)} autoComplete="off" />
@@ -44,7 +46,7 @@ const Contact = () => {
           {isPending && <LoadingSpinner />} SEND MESSAGE
         </button>
       </form>
-    </div>
+    </section>
   );
 };
 

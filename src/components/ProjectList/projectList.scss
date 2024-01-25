@@ -1,0 +1,30 @@
+@use "../../scss//index" as *;
+
+.projectList {
+    @include flex-center(column);
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+
+    &__section {
+      width: 95vw;
+      padding-left: 1rem;
+      @media (max-width: $lgmq) {
+        padding-left: 2.5rem;
+      }
+      @media (max-width: $smq) {
+        padding-left: 0;
+      }
+    }
+
+    &__cards {
+      // @include flex-center(row);
+      display: flex;
+      flex-wrap: nowrap;
+      
+      padding: 1rem 0;
+      gap: 1.25rem;
+      overflow-x: auto;
+      @include custom-scrollbar();
+    }
+  }

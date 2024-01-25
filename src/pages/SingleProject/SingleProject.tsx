@@ -1,5 +1,5 @@
 import { Link, useParams } from "react-router-dom";
-import { projects } from "../Projects/projectsList";
+import { projects } from "../../components/ProjectList/projectsList";
 import { useContext, useEffect, useState } from "react";
 import { TProjectDataExtended } from "../../types/ProjectTypes";
 
@@ -33,7 +33,7 @@ const SingleProject = () => {
     if (windowSize.width < 1280) {
       setShowFullProjectDescription(false);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [path, projectTypeArr, dispatch]);
 
   useEffect(() => {

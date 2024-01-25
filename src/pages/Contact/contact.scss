@@ -9,23 +9,7 @@
     padding: 2rem 0;
   }
 
-  &__header {
-    @include sectionHeader();
-
-    @media (max-width: $smq) {
-      padding: 2rem;
-    }
-
-    &__title {
-      @include sectionTitle();
-    }
-
-    &__infoText {
-      color: gray;
-    }
-  }
-
-  &__error {
+    &__error {
     background-color: rgb(44, 29, 27);
     color: $clr-error;
     padding: 0.5rem;
