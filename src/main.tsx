@@ -8,7 +8,7 @@ const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.Fragment>
-    <QueryClientProvider client={queryClient}>
+    <QueryClientProvider client={queryClient}> 
       <App />
     </QueryClientProvider>
   </React.Fragment>
