@@ -8,6 +8,8 @@ import financeLiteracyImg5 from "./financeLiteracyImg5.png";
 // GENERATORS IMAGES
 import generatorsImg from "./generatorsImg.png";
 import generatorsImg2 from "./generatorsImg2.png";
+import generatorsImg3 from "./generatorsImg3.png";
+import generatorsImg4 from "./generatorsImg4.png";
 
 // OPEN AI IMAGES
 import gptImg from "./gptImg.png";
@@ -25,4 +27,4 @@ import quizImg3 from "./quizImg3.png";
 // PLACEHOLDER IMAGE
 import placeholderImage from "./placeholderImage.png";
 
-export { gptImg2, gptImg3, financeLiteracyImg, financeLiteracyImg2, generatorsImg, generatorsImg2, gptImg, linkerImg, quizImg, quizImg2, quizImg3, placeholderImage, financeLiteracyImg3, financeLiteracyImg4, financeLiteracyImg5 };
+export {generatorsImg4, generatorsImg3, gptImg2, gptImg3, financeLiteracyImg, financeLiteracyImg2, generatorsImg, generatorsImg2, gptImg, linkerImg, quizImg, quizImg2, quizImg3, placeholderImage, financeLiteracyImg3, financeLiteracyImg4, financeLiteracyImg5 };
