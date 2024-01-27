@@ -64,10 +64,9 @@ export const projects: TProjectDataExtended[] = [
         path: "generators",
         usedTechImgs: getUsedTech("web", ["React JS", "Typescript", "React Query", "CSS"]),
         description:
-          "Made specifically for the company I work for as a software tester, this comprehensive generator tool simplifies our daily tasks. It allows for customizable Lorem Ipsum text generation with adjustable paragraph and character counts, and the creation of random birth numbers for both mens and womens. The project also incorporates a straightforward daily report list feature.",
-        img: [generatorsImg, generatorsImg2],
+          "UPDATE 1/2024 - I used this project to learn basics of Tailwind with shadcn UI libray and auth with Clerk. First version of this app is NOT AVAILABLE anymore!!!\n\nFeel free to check new updated version.\n\nMade specifically for the company I work for as a software tester, this comprehensive generator tool simplifies our daily tasks. It allows for customizable Lorem Ipsum text generation with adjustable paragraph and character counts, and the creation of random birth numbers for both mens and womens. The project also incorporates a straightforward daily report list feature.",        img: [generatorsImg, generatorsImg2],
         video: "",
-        liveSiteURL: "https://bwrd.eu/#/tipsport",
+        liveSiteURL: "https://generators.bwrd.eu",
         demoSiteURL: "",
         availableForPublic: true,
         inDevelopment: false,
