@@ -1,6 +1,6 @@
 import "./singleProject.scss";
 import { useParams } from "react-router-dom";
-import { projects } from "../../components/ProjectList/projectsList";
+import { projects } from "../../components/ProjectList/projectsListData";
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../../services/Context/AppContext";
 import { ACTION_TYPES } from "../../services/Context/appReducer";

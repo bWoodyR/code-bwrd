@@ -1,7 +1,7 @@
 import "./projectList.scss";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import SubheaderTitle from "../../components/SubheaderTitle/SubheaderTitle";
-import { projects } from "./projectsList";
+import { projects } from "./projectsListData";
 
 const ProjectList = () => {
   return (
