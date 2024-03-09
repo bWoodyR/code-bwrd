@@ -1,4 +1,21 @@
-import { financeLiteracyImg, financeLiteracyImg2, financeLiteracyImg3, financeLiteracyImg4, financeLiteracyImg5, generatorsImg, generatorsImg2, generatorsImg3, generatorsImg4, gptImg, gptImg2, gptImg3, linkerImg, quizImg, quizImg2, quizImg3 } from "../../assets/thumbnails";
+import {
+  financeLiteracyImg,
+  financeLiteracyImg2,
+  financeLiteracyImg3,
+  financeLiteracyImg4,
+  financeLiteracyImg5,
+  generatorsImg,
+  generatorsImg2,
+  generatorsImg3,
+  generatorsImg4,
+  gptImg,
+  gptImg2,
+  gptImg3,
+  linkerImg,
+  quizImg,
+  quizImg2,
+  quizImg3,
+} from "../../assets/thumbnails";
 import { TProjectDataExtended } from "../../types/ProjectTypes";
 import { technologies } from "../ExperienceTechnologiesList/technologies";
 
@@ -64,10 +81,22 @@ export const projects: TProjectDataExtended[] = [
         path: "generators",
         usedTechImgs: getUsedTech("web", ["React JS", "Typescript", "React Query", "CSS"]),
         description:
-          "UPDATE 1/2024 - I used this project to learn basics of Tailwind with shadcn UI library and auth with Clerk. First version of this app is NOT AVAILABLE anymore!!!\n\nFeel free to check new updated version. Login with Google account is required.\n\nMade specifically for the company I work for as a software tester, this comprehensive generator tool simplifies our daily tasks. It allows for customizable Lorem Ipsum text generation with adjustable paragraph and character counts, and the creation of random birth numbers for both mens and womens. The project also incorporates a straightforward daily report list feature.",        
-          img: [generatorsImg, generatorsImg2, generatorsImg3, generatorsImg4],
+          "UPDATE 1/2024 - I used this project to learn basics of Tailwind with shadcn UI library and auth with Clerk. First version of this app is NOT AVAILABLE anymore!!!\n\nFeel free to check new updated version. Login with Google account is required.\n\nMade specifically for the company I work for as a software tester, this comprehensive generator tool simplifies our daily tasks. It allows for customizable Lorem Ipsum text generation with adjustable paragraph and character counts, and the creation of random birth numbers for both mens and womens. The project also incorporates a straightforward daily report list feature.",
+        img: [generatorsImg, generatorsImg2, generatorsImg3, generatorsImg4],
         video: "",
         liveSiteURL: "https://generators.bwrd.eu",
+        demoSiteURL: "",
+        availableForPublic: true,
+        inDevelopment: false,
+      },
+      {
+        title: "Frontend Mentor Challanges",
+        path: "challenges",
+        usedTechImgs: getUsedTech("web", ["React JS", "Typescript", "React Query", "SASS"]),
+        description: "",
+        img: [],
+        video: "",
+        liveSiteURL: "https://code.bwrd.eu/web-challenges",
         demoSiteURL: "",
         availableForPublic: true,
         inDevelopment: false,
