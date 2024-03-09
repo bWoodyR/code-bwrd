@@ -15,6 +15,7 @@ import {
   quizImg,
   quizImg2,
   quizImg3,
+  webChallengesImg
 } from "../../assets/thumbnails";
 import { TProjectDataExtended } from "../../types/ProjectTypes";
 import { technologies } from "../ExperienceTechnologiesList/technologies";
@@ -90,11 +91,11 @@ export const projects: TProjectDataExtended[] = [
         inDevelopment: false,
       },
       {
-        title: "Frontend Mentor Challanges",
+        title: "Web Challanges",
         path: "challenges",
         usedTechImgs: getUsedTech("web", ["React JS", "Typescript", "React Query", "SASS"]),
         description: "",
-        img: [],
+        img: [webChallengesImg],
         video: "",
         liveSiteURL: "https://code.bwrd.eu/web-challenges",
         demoSiteURL: "",

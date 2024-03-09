@@ -24,7 +24,10 @@ import quizImg from "./quizImg.png";
 import quizImg2 from "./quizImg2.png";
 import quizImg3 from "./quizImg3.png";
 
+// WEB CHALLENGES IMAGES
+import webChallengesImg from "./webChallengesImg.png"
+
 // PLACEHOLDER IMAGE
 import placeholderImage from "./placeholderImage.png";
 
-export {generatorsImg4, generatorsImg3, gptImg2, gptImg3, financeLiteracyImg, financeLiteracyImg2, generatorsImg, generatorsImg2, gptImg, linkerImg, quizImg, quizImg2, quizImg3, placeholderImage, financeLiteracyImg3, financeLiteracyImg4, financeLiteracyImg5 };
+export {webChallengesImg, generatorsImg4, generatorsImg3, gptImg2, gptImg3, financeLiteracyImg, financeLiteracyImg2, generatorsImg, generatorsImg2, gptImg, linkerImg, quizImg, quizImg2, quizImg3, placeholderImage, financeLiteracyImg3, financeLiteracyImg4, financeLiteracyImg5 };
